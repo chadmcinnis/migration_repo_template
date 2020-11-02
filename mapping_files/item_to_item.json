@@ -1,0 +1,18 @@
+{
+    "fields": {
+        "legacy_key_in_item_export_tsv": {
+            "target": "folio_item_field_name",
+            "description": "describe the field",
+            "mapping_file_path": "path_to_mapping_file
+        },
+         "z30_material_type": {
+            "target": "material_type",
+            "description": "./material_types.tsv"
+        },
+    },
+    "legacyIdField": "Z30_BARCODE",
+    "legacyFieldsToCountValuesFor":["Z30_ITEM_STATUS"],
+    "itemsFileType": "TSV",
+    "itemsFileDelimiter": "",
+    "mapOnLocationField": "code"
+}
