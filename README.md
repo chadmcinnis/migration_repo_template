@@ -80,12 +80,16 @@ These are the mappings of the legacy and FOLIO locations. The file is structured
 The file is needed for both Holdings migration and Item migration
 
 ## material_types.tsv
-These mappings can be more complex. The first column name is fixed, since that is the target material type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match.
+These mappings can be more complex. The first column name is fixed, since that is the target material type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match. Se loan_types.tsv for complex examples
  folio_name | Z30_MATERIAL 
 ------------ | ------------- 
  Audiocassette | ACASS
 
 ## loan_types.tsv
 These mappings can be more complex. The first column name is fixed, since that is the target loan type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match
+
+ folio_name | Z30_SUB_LIBRARY | Z30_ITEM_STATUS 
+------------ | ------------- | -------------
+ Non-circulating | UMDUB, UMSCI, UMFAC, UMSCA, UMFCD, UMIMA | 02, 03, 13
 
 
