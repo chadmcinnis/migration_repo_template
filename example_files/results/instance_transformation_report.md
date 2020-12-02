@@ -1,5 +1,5 @@
 # Bibliographic records transformation results   
-Time Run: 2020-12-02T10:03:40.827565   
+Time Run: 2020-12-02T12:19:47.033783   
 ## Bibliographic records transformation counters   
   Measure   | Count   
    
