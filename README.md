@@ -92,4 +92,5 @@ These mappings can be more complex. The first column name is fixed, since that i
 ------------ | ------------- | -------------
  Non-circulating | UMDUB, UMSCI, UMFAC, UMSCA, UMFCD, UMIMA | 02, 03, 13
 
-
+# Example Records
+In the example records folder, you will find example source records and example results from after a transformation
