@@ -6,6 +6,24 @@ In order to perform migrations according to this process, you need to clone the 
 
 # Mapping files
 The repo contains the following mapping files in the Mapping files folder.
+
+# What file is needed for what objects?
+File\Process | Bibs->Instances | Holdings | Items 
+------------ | ------------- | ------------- | -------------
+marc-instance-mapping-rules.json  | yes | no | no
+mfhd_rules.json  | no | yes | no
+item_to_item.json  | no | no | yes
+locations.tsv  | no | yes | yes
+material_types.tsv  | no | no | yes
+loan_types.tsv  | yes | no | yes
+
+## marc-instance-mapping-rules.json
+These are the mapping rules from MARC21 bib records to FOLIO instances. The rules are stored in the tenant, but it is good practice to keep them under version control so you can maintain the customizations as the mapping rules evolve.For more information on syntax etc, read the [documentation](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md).
+
+## mfhd_rules.json
+This file is built out according to the [mapping rules for bibs](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md). The conditions are different, and not well documented at this point. Look at the example file and refer to the mappinrules documentation 
+
+
 ## item_to_item.json
 This is a mapping file for the items. The process assumes you have the item data in a CSV/TSV format. 
 The structure of the file is dependant on the the column names in the TSV file. For example, if you have a file that looks like this:
@@ -52,7 +70,22 @@ There are other fields to help with other file format than TSV as well.
     "legacyIdField": "Z30_BARCODE",
     "mapOnLocationField": "code"
 ```
-## mfhd_rules.json
-This file is built out according to the [mapping rules for bibs](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md). The conditions are different, and not well documented at this point. Look at the example file and refer to the mappinrules documentation 
+
+## locations.tsv
+These are the mappings of the legacy and FOLIO locations. The file is structured like this:
+ legacy_code | folio_code 
+------------ | ------------- 
+ AFAS | AFA
+ 
+The file is needed for both Holdings migration and Item migration
+
+## material_types.tsv
+These mappings can be more complex. The first column name is fixed, since that is the target material type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match.
+ folio_name | Z30_MATERIAL 
+------------ | ------------- 
+ Audiocassette | ACASS
+
+## loan_types.tsv
+These mappings can be more complex. The first column name is fixed, since that is the target loan type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match
 
 
