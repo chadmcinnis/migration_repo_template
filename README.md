@@ -20,7 +20,7 @@ mfhd_rules.json  | no | yes | no
 item_to_item.json  | no | no | yes
 locations.tsv  | no | yes | yes
 material_types.tsv  | no | no | yes
-loan_types.tsv  | yes | no | yes
+loan_types.tsv  | no | no | yes
 
 ## marc-instance-mapping-rules.json
 These are the mapping rules from MARC21 bib records to FOLIO instances. The rules are stored in the tenant, but it is good practice to keep them under version control so you can maintain the customizations as the mapping rules evolve.For more information on syntax etc, read the [documentation](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md).
