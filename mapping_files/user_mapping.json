@@ -100,5 +100,12 @@
             "folio_field": "username",
             "legacy_field": "Not mapped"
         }
-    ]
+    ],
+     "preferredContactTypeId": "Email",
+    "addressTypes": [
+        "Home Address",
+        "School/Temp Address"
+    ],
+    "emailToUseWhileTesting": "morganm@gvsu.edu",
+    "primaryAddressIndex": 0
 }
