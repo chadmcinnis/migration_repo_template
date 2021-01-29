@@ -200,5 +200,14 @@
             "folio_field": "yearCaption[0]",
             "legacy_field": "Not mapped"
         }
-    ]
+    ],
+    "defaultLoantypeName": "stks7",
+    "defaultLocationCode": "L11",
+    "defaultMaterialTypeName": "Book",
+    "itemsFileType": "TSV",
+    "legacyFieldsToCountValuesFor": [
+        "Z30_ITEM_STATUS"
+    ],
+    "legacyIdField": "Z30_BARCODE",
+    "mapOnLocationField": "code"
 }
