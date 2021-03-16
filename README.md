@@ -117,6 +117,13 @@ These mappings allow for some complexity. The first column name is fixed, since 
  Non-circulating | UMDUB, UMSCI, UMFAC, UMSCA, UMFCD, UMIMA | 02, 03, 13
  Non-circulating | * | *
 
+## call_number_type_mapping.tsv
+These mappings allow for some complexity eventhough not needed. 
+ folio_name | Z30_CALL_NO_TYPE 
+------------ | -------------
+Dewey Decimal classification | 8
+Unmapped | *
+
 # Example Records
 In the [example records folder](https://github.com/FOLIO-FSE/migration_repo_template/tree/main/example_files), you will find example source records and example results from after a transformation
 ## Result files
