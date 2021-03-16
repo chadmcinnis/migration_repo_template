@@ -97,7 +97,7 @@ These mappings allow for some complexity. These are the mappings of the legacy a
  legacy_code | folio_code | Z30_COLLECTION 
 ------------ | ------------- | -------------
  AFAS | AFA | AFAS
-  * | AFB | * 
+   *   | AFA |  *  
  
 The legacy_code part is needed for both Holdings migratiom. For Item migration, the source fields can be used (Z30_COLLECTION in this case). You can add as many source fields as you like for the Items
 
