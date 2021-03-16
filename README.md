@@ -32,22 +32,44 @@ This file is built out according to the [mapping rules for bibs](https://github.
 ## item_to_item.json
 This is a mapping file for the items. The process assumes you have the item data in a CSV/TSV format. 
 The structure of the file is dependant on the the column names in the TSV file. For example, if you have a file that looks like this:
-... | Z30_BARCODE | Z30_CALL_NO | ... 
------------- | ------------- | ------------- | -------------
- ... | 123456790 | Some call number | ...
+... | Z30_BARCODE | Z30_CALL_NO | Z30_DESCRIPTION |  ... 
+------------ | ------------- | ------------- | ------------- | -------------
+ ... | 123456790 | Some call number | some note  | ...
  
 
 
 Your map should look like this:
 ```
 ...
-"Z30_BARCODE": {
- 	"description": "",
-	"target": "barcode"
+{
+    "folio_field": "barcode",
+    "legacy_field": "Z30_BARCODE",
+    "value":"",
+    "description": ""
 },
-"Z30_CALL_NO": {
-	"description": "",
-	"target": "itemLevelCallNumber"
+{
+    "folio_field": "itemLevelCallNumber",
+    "legacy_field": "Z30_CALL_NO",
+    "value":"",
+    "description": ""
+}, 
+{
+    "folio_field": "notes[0].itemNoteTypeId",
+    "legacy_field": "Z30_DESCRIPTION",
+    "value": "c7bc292c-a318-43d3-9b03-7a40dfba046a",
+    "description": ""
+},
+{
+    "folio_field": "notes[0].staffOnly",
+    "legacy_field": "Z30_DESCRIPTION",
+    "value": false,
+    "description": ""
+},
+{
+    "folio_field": "notes[0].note",
+    "legacy_field": "Z30_DESCRIPTION",
+    "value": false,
+    "description": ""
 },
 ...
 ```
@@ -56,7 +78,12 @@ The resulting FOLIO Item would look like this:
 {
 	...
 	"barcode": "123456790",
-	"itemLevelCallNumber": "Z30_CALL_NO"
+	"itemLevelCallNumber": "Some call number"
+	"notes":[{
+			"staffOnly": false,
+			"note": "some note",
+			"itemNoteTypeId": "c7bc292c-a318-43d3-9b03-7a40dfba046a"			
+		}],
 	...
 }
 ```
