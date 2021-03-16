@@ -77,21 +77,21 @@ There are other fields to help with other file format than TSV as well.
 ```
 
 ## locations.tsv
-These are the mappings of the legacy and FOLIO locations. The file is structured like this:
- legacy_code | folio_code 
------------- | ------------- 
- AFAS | AFA
+These mappings allow for some complexity. These are the mappings of the legacy and FOLIO locations. The file must be structured like this:
+ legacy_code | folio_code | Z30_COLLECTION 
+------------ | ------------- | -------------
+ AFAS | AFA | AFAS
  
-The file is needed for both Holdings migration and Item migration
+The legacy_code part is needed for both Holdings migratiom. For Item migration, the source fields can be used (Z30_COLLECTION in this case). You can add as many source fields as you like for the Items
 
 ## material_types.tsv
-These mappings can be more complex. The first column name is fixed, since that is the target material type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match. Se loan_types.tsv for complex examples
+These mappings allow for some complexity. The first column name is fixed, since that is the target material type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match. Se loan_types.tsv for complex examples
  folio_name | Z30_MATERIAL 
 ------------ | ------------- 
  Audiocassette | ACASS
 
 ## loan_types.tsv
-These mappings can be more complex. The first column name is fixed, since that is the target loan type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match
+These mappings allow for some complexity. The first column name is fixed, since that is the target loan type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match
 
  folio_name | Z30_SUB_LIBRARY | Z30_ITEM_STATUS 
 ------------ | ------------- | -------------
