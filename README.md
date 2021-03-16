@@ -11,13 +11,14 @@ In order to perform migrations according to this process, you need to clone the 
 
 # Mapping files
 The repo contains the following mapping files in the Mapping files folder.
+There is a web tool that helps you crate the mappin files for certain objects available at https://data-mapping-file-creator.folio.ebsco.com/data_mapping_creation
 
-# What file is needed for what objects?
+## What file is needed for what objects?
 File\Process | Bibs->Instances | Holdings | Items 
 ------------ | ------------- | ------------- | -------------
 marc-instance-mapping-rules.json  | yes | no | no
 mfhd_rules.json  | no | yes | no
-item_to_item.json  | no | no | yes
+item_mapping.json  | no | no | yes
 locations.tsv  | no | yes | yes
 material_types.tsv  | no | no | yes
 loan_types.tsv  | no | no | yes
