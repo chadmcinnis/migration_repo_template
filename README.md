@@ -97,7 +97,8 @@ These mappings allow for some complexity. These are the mappings of the legacy a
  legacy_code | folio_code | Z30_COLLECTION 
 ------------ | ------------- | -------------
  AFAS | AFA | AFAS
-     *    | AFA |   *    
+ * | AFA | *
+
  
 The legacy_code part is needed for both Holdings migratiom. For Item migration, the source fields can be used (Z30_COLLECTION in this case). You can add as many source fields as you like for the Items
 
@@ -106,6 +107,7 @@ These mappings allow for some complexity. The first column name is fixed, since 
  folio_name | Z30_MATERIAL 
 ------------ | ------------- 
  Audiocassette | ACASS
+ Audiocassette | *
 
 ## loan_types.tsv
 These mappings allow for some complexity. The first column name is fixed, since that is the target loan type in FOLIO. Then you add the column names from the Item export TSV. For each column added, the values in them must match. At least one value per column must match
@@ -113,6 +115,7 @@ These mappings allow for some complexity. The first column name is fixed, since 
  folio_name | Z30_SUB_LIBRARY | Z30_ITEM_STATUS 
 ------------ | ------------- | -------------
  Non-circulating | UMDUB, UMSCI, UMFAC, UMSCA, UMFCD, UMIMA | 02, 03, 13
+ Non-circulating | * | *
 
 # Example Records
 In the [example records folder](https://github.com/FOLIO-FSE/migration_repo_template/tree/main/example_files), you will find example source records and example results from after a transformation
