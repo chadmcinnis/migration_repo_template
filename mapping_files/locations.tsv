@@ -1,2 +1,2 @@
-legacy_code	folio_code
-ACDPM	L10
+Z30_SUB_LIBRARY	Z30_COLLECTION	folio_code
+ACDEP	ACDPM	ACDPM
