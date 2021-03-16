@@ -30,7 +30,7 @@ These are the mapping rules from MARC21 bib records to FOLIO instances. The rule
 This file is built out according to the [mapping rules for bibs](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md). The conditions are different, and not well documented at this point. Look at the example file and refer to the mappinrules documentation 
 
 
-## item_to_item.json
+## item_mapping.json
 This is a mapping file for the items. The process assumes you have the item data in a CSV/TSV format. 
 The structure of the file is dependant on the the column names in the TSV file. For example, if you have a file that looks like this:
 ... | Z30_BARCODE | Z30_CALL_NO | Z30_DESCRIPTION |  ... 
@@ -89,26 +89,15 @@ The resulting FOLIO Item would look like this:
 }
 ```
 ### Default fields
-There are a couple of properties in the file that are used for giving default values if reference data mapping fails.
-There are other fields to help with other file format than TSV as well.
-```
-	"itemsFileDelimiter": "",
-    "defaultLoantypeName": "Migration-technical",
-    "defaultLocationCode": "tech",
-    "defaultMaterialTypeName": "unspecified",
-    "itemsFileType": "TSV",
-    "legacyFieldsToCountValuesFor": [
-        "Z30_ITEM_STATUS"
-    ],
-    "legacyIdField": "Z30_BARCODE",
-    "mapOnLocationField": "code"
-```
+All mapping files (locations.tsv, material_types.tsv, locations.tsv etc) have a mechanism that allows you to add * to legacy fields in a row, and add the default value from folio in the folio_code/folio_name column. If the mapping fails, the script will assign this value to the records created. Good practice is to have migration-specific value for defaults to be able to locate the records in FOLIO
+
 
 ## locations.tsv
 These mappings allow for some complexity. These are the mappings of the legacy and FOLIO locations. The file must be structured like this:
  legacy_code | folio_code | Z30_COLLECTION 
 ------------ | ------------- | -------------
  AFAS | AFA | AFAS
+ * | AFB | * 
  
 The legacy_code part is needed for both Holdings migratiom. For Item migration, the source fields can be used (Z30_COLLECTION in this case). You can add as many source fields as you like for the Items
 
