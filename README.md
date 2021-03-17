@@ -115,7 +115,7 @@ These mappings allow for some complexity. The first column name is fixed, since 
 
  folio_name | Z30_SUB_LIBRARY | Z30_ITEM_STATUS 
 ------------ | ------------- | -------------
- Non-circulating | UMDUB, UMSCI, UMFAC, UMSCA, UMFCD, UMIMA | 02, 03, 13
+ Non-circulating | UMDUB | 02
  Non-circulating | * | *
 
 ## call_number_type_mapping.tsv
