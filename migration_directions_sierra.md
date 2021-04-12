@@ -8,9 +8,10 @@
   * [Item records](#item-records)
   * [Patron records](#patron-records)
   * [Open loans](#bib-records)
-  * [Open requests](open-requests)
-  * [Vendor records](vendor-records)
-  * [Order records](order-records)  
+  * [Open requests](#open-requests)
+  * [Vendor records](#vendor-records)
+  * [Order records](#order-records)
+* [Latest export](#latest-export)
 
 ## What we will migrate
 |From Sierra...|To FOLIO...|
@@ -110,3 +111,16 @@ After receiving the data, **IC** will
 After receiving the data, **IC** will
 - Transform the orders into FOLIO Orders and PO Lines
 - Load the Orders and PO Lines into FOLIO
+
+## Latest export
+Add a new column for each new export
+|Data type|Name & date|Name & date|
+|---|---|---|
+|Bibs|name.csv yyyymmdd|name.csv yyyymmdd|
+|Items|name.csv yyyymmdd|name.csv yyyymmdd|
+|Check-in|name.csv yyyymmdd|name.csv yyyymmdd|
+|Patrons|name.csv yyyymmdd|name.csv yyyymmdd|
+|Loans|name.csv yyyymmdd|name.csv yyyymmdd|
+|Requests|name.csv yyyymmdd|name.csv yyyymmdd
+|Vendors|name.csv yyyymmdd|name.csv yyyymmdd
+|Orders|name.csv yyyymmdd|name.csv yyyymmdd
