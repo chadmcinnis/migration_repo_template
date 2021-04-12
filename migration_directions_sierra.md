@@ -13,17 +13,19 @@
   * [Order records](order-records)  
 
 ## What we will migrate
-- Sierra bibs   ➡️  FOLIO instances (scripted)
-- Sierra check-in   ➡️  FOLIO holdings (scripted)
-- Sierra items  ➡️  FOLIO holdings (scripted)
-- Sierra items  ➡️  FOLIO items (scripted)
-- Sierra patrons    ➡️  FOLIO users (scripted)
-- Sierra loans  ➡️  FOLIO loans (scripted)
-- Sierra requests   ➡️  FOLIO requests (manual)
-
-- Sierra vendors    ➡️  FOLIO organizations (scripted)
-- Sierra orders ➡️  FOLIO Orders (scripted)
-- Sierra orders ➡️  FOLIO PO lines (scripted)
+|From Sierra...|To FOLIO...|
+|---|---|
+|Bibliographic records|Instances|
+|Bibliographic records|SRS records|
+|Check-in records|Holdings|
+|Items|Holdings|
+|Items|Items|
+|Patrons|Users|
+|Loans|Loans|
+|Requests|Requests|
+|Vendors|Organizations|
+|Orders|Orders|
+|Orders|PO Lines|
 
 
 
