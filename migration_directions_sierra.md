@@ -28,7 +28,7 @@
 
 
 ## Data to extract
-For csv ecxports: use comma as delimiter, and semi-colon as repeated-field delimiter.
+When exporting data from Create lists, please use comma as delimiter, and semi-colon as repeated-field delimiter.
 
 ### Bib records
 **Library** exports a file of .b records in MARC21 format, using Create lists and Data Exchange.
