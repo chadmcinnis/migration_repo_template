@@ -35,7 +35,7 @@ When exporting data from Create lists, please use comma as delimiter, and semi-c
 ### Bib records
 **Library** exports a file of .b records in MARC21 format, using Create lists and Data Exchange.
 
-**IC** and **library** verify that the library's MARC-to-FOLIO mapping is up-to-date and correct.
+**IC** and **library** verify that all relevant [mapping_files](mapping_files) are up-to-date and correct.
 
 ### Serials check-in records
 **Library** exports a file of .c records in MARC21 format, using Create lists and Data Exchange.
