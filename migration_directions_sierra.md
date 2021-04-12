@@ -9,6 +9,8 @@
   * [Patron records](#patron-records)
   * [Open loans](#bib-records)
   * [Open requests](open-requests)
+  * [Vendor records](vendor-records)
+  * [Order records](order-records)  
 
 ## What we will migrate
 - Sierra bibs ➡️ FOLIO instances (scripted)
@@ -19,7 +21,15 @@
 - Sierra loans ➡️ FOLIO loans (scripted)
 - Sierra requests ➡️ FOLIO requests (manual)
 
+- Sierra vendors ➡️ FOLIO organizations (scripted)
+- Sierra orders ➡️ FOLIO Orders (scripted)
+- Sierra orders ➡️ FOLIO PO lines (scripted)
+
+
+
 ## Data to extract
+For csv ecxports: use comma as delimiter, and semi-colon as repeated-field delimiter.
+
 ### Bib records
 **Library** exports a file of .b records in MARC21 format, using Create lists and Data Exchange.
 
@@ -40,17 +50,11 @@ After exporting the data, **IC** will
 **IC** and **library** verify that all relevant [mapping_files](mapping_files) are up-to-date and correct.
 
 ### Patron records
-**Library** exports a file of .p records using Create lists. 
+**Library** exports a file of .p records in csv format using Create lists. 
 
 |Sierra fields to export|
 |---|
-|Name|
-|Barcode|
-|Email|
-|Patron Type|
-|Telephone|
-|Student ID|
-|Record Number|
+|TBD|
 
 **IC** and **library** verify that all relevant [mapping_files](mapping_files) are up-to-date and correct.
 
@@ -60,7 +64,7 @@ After receiving the data, **IC** will
 - Load the users into FOLIO
 
 ### Open loans
-**Library** exports a file of .i records using Create lists. 
+**Library** exports a file of .i records in csv format using Create lists. 
 
 |Sierra fields to export|
 |---|
@@ -78,3 +82,29 @@ After receiving the data, **IC** will
 
 ### Open requests
 We expect the number of open requests to be so low that the migration will most easily be done manually by **library**.
+
+### Vendor records
+**Library** exports a file of .v records in csv format using Create lists. 
+
+|Sierra fields to export|
+|---|
+|TBD|
+
+**IC** and **library** verify that all relevant [mapping_files](mapping_files) are up-to-date and correct.
+
+After receiving the data, **IC** will
+- Transform the vendors into FOLIO organizations
+- Load the organizations into FOLIO
+
+### Order records
+**Library** exports a file of .o records in csv format using Create lists. 
+
+|Sierra fields to export|
+|---|
+|TBD|
+
+**IC** and **library** verify that all relevant [mapping_files](mapping_files) are up-to-date and correct.
+
+After receiving the data, **IC** will
+- Transform the orders into FOLIO Orders and PO Lines
+- Load the Orders and PO Lines into FOLIO
