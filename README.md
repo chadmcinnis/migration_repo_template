@@ -11,7 +11,7 @@ In order to perform migrations according to this process, you need to clone the 
 
 # Mapping files
 The repo contains the following mapping files in the Mapping files folder.
-There is a web tool that helps you crate the mappin files for certain objects available at https://data-mapping-file-creator.folio.ebsco.com/data_mapping_creation
+There is a web tool that helps you crate the mapping files for certain objects available at https://data-mapping-file-creator.folio.ebsco.com/data_mapping_creation
 
 ## What file is needed for what objects?
 File\Process | Bibs->Instances | Holdings | Items 
@@ -22,7 +22,8 @@ item_mapping.json  | no | no | yes
 locations.tsv  | no | yes | yes
 material_types.tsv  | no | no | yes
 loan_types.tsv  | no | no | yes
-call_number_type_mapping.tsv  | no | no | yes
+call_number_type_mapping.tsv  | no | no | optional
+statcodes.tsv  | no | no | optional
 
 ## marc-instance-mapping-rules.json
 These are the mapping rules from MARC21 bib records to FOLIO instances. The rules are stored in the tenant, but it is good practice to keep them under version control so you can maintain the customizations as the mapping rules evolve.For more information on syntax etc, read the [documentation](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md).
@@ -124,6 +125,13 @@ These mappings allow for some complexity eventhough not needed.
 ------------ | -------------
 Dewey Decimal classification | 8
 Unmapped | *
+
+## statcodes.tsv
+In order to map one statistical code to the FOLIO UUID, you need this map, and the field mapped in the item_mappings.json. These mappings allow for some complexity even though not needed. This mapping does not allow for default values. Any record without the field will not get one assigned.
+ folio_code | Z30_STAT_CODE 
+------------ | -------------
+married_with_children | 8
+happily_ever_after | 9
 
 # Example Records
 In the [example records folder](https://github.com/FOLIO-FSE/migration_repo_template/tree/main/example_files), you will find example source records and example results from after a transformation
