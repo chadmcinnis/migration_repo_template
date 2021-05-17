@@ -24,6 +24,7 @@ material_types.tsv  | no | no | yes
 loan_types.tsv  | no | no | yes
 call_number_type_mapping.tsv  | no | no | optional
 statcodes.tsv  | no | no | optional
+item_statuses.tsv | no | no | optional   
 
 ## marc-instance-mapping-rules.json
 These are the mapping rules from MARC21 bib records to FOLIO instances. The rules are stored in the tenant, but it is good practice to keep them under version control so you can maintain the customizations as the mapping rules evolve.For more information on syntax etc, read the [documentation](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md).
@@ -96,10 +97,10 @@ All mapping files (locations.tsv, material_types.tsv, locations.tsv etc) have a 
 
 ## locations.tsv
 These mappings allow for some complexity. These are the mappings of the legacy and FOLIO locations. The file must be structured like this:
- legacy_code | folio_code | Z30_COLLECTION 
+ folio_code | legacy_code | Z30_COLLECTION 
 ------------ | ------------- | -------------
- AFAS | AFA | AFAS
- * | AFA | *
+ AFA | AFAS | AFAS   
+ AFA  |  * |  *    
 
  
 The legacy_code part is needed for both Holdings migratiom. For Item migration, the source fields can be used (Z30_COLLECTION in this case). You can add as many source fields as you like for the Items
@@ -117,14 +118,14 @@ These mappings allow for some complexity. The first column name is fixed, since 
  folio_name | Z30_SUB_LIBRARY | Z30_ITEM_STATUS 
 ------------ | ------------- | -------------
  Non-circulating | UMDUB | 02
- Non-circulating | * | *
+ Non-circulating | * | *   
 
 ## call_number_type_mapping.tsv
 These mappings allow for some complexity eventhough not needed. 
  folio_name | Z30_CALL_NO_TYPE 
 ------------ | -------------
 Dewey Decimal classification | 8
-Unmapped | *
+Unmapped | *   
 
 ## statcodes.tsv
 In order to map one statistical code to the FOLIO UUID, you need this map, and the field mapped in the item_mappings.json. These mappings allow for some complexity even though not needed. This mapping does not allow for default values. Any record without the field will not get one assigned.
@@ -132,6 +133,14 @@ In order to map one statistical code to the FOLIO UUID, you need this map, and t
 ------------ | -------------
 married_with_children | 8
 happily_ever_after | 9
+
+## item_statuses.tsv	
+The handling of Item statuses is a bit of a project of its own, since not all statuses in legacy systems will have their equivalents in FOLIO. This mapping allows you to point one legacy status to a FOLIO status. If not status map is supplied, the status will be set to available.
+legacy_code | folio_name 
+------------ | -------------
+checked_out | Checked out
+available | Available
+lost | Aged to lost
 
 # Example Records
 In the [example records folder](https://github.com/FOLIO-FSE/migration_repo_template/tree/main/example_files), you will find example source records and example results from after a transformation
