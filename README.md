@@ -14,17 +14,18 @@ The repo contains the following mapping files in the Mapping files folder.
 There is a web tool that helps you crate the mapping files for certain objects available at https://data-mapping-file-creator.folio.ebsco.com/data_mapping_creation
 
 ## What file is needed for what objects?
-File\Process | Bibs->Instances | Holdings | Items 
------------- | ------------- | ------------- | -------------
-marc-instance-mapping-rules.json  | yes | no | no
-mfhd_rules.json  | no | yes | no
-item_mapping.json  | no | no | yes
-locations.tsv  | no | yes | yes
-material_types.tsv  | no | no | yes
-loan_types.tsv  | no | no | yes
-call_number_type_mapping.tsv  | no | no | optional
-statcodes.tsv  | no | no | optional
-item_statuses.tsv | no | no | optional   
+File\Process | Bibs->Instances | Holdings | Items  | Open Loans   
+------------ | ------------- | ------------- | ------------- | -------------   
+marc-instance-mapping-rules.json  | yes | no | no |   no    
+mfhd_rules.json  | no | yes | no |  no   
+item_mapping.json  | no | no | yes |  no   
+locations.tsv  | no | yes | yes |  no   
+material_types.tsv  | no | no | yes |  no   
+loan_types.tsv  | no | no | yes |  no   
+call_number_type_mapping.tsv  | no | no | optional |  no   
+statcodes.tsv  | no | no | optional |  no   
+item_statuses.tsv | no | no | optional    |  no   
+post_loan_migration_statuses.tsv | no | no | no    |  optional  
 
 ## marc-instance-mapping-rules.json
 These are the mapping rules from MARC21 bib records to FOLIO instances. The rules are stored in the tenant, but it is good practice to keep them under version control so you can maintain the customizations as the mapping rules evolve.For more information on syntax etc, read the [documentation](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md).
@@ -141,6 +142,10 @@ legacy_code | folio_name
 checked_out | Checked out
 available | Available
 lost | Aged to lost
+
+## post_loan_migration_statuses.tsv
+This is not yet a mapping file per se, but it is used to substitute the values in the next_item_status column in the legacy open loans file.
+Leave the statuses you do not want the loans migration process to migrate empty and replace the legacy statuses you want to apply with the correct FOLIO ones.
 
 # Example Records
 In the [example records folder](https://github.com/FOLIO-FSE/migration_repo_template/tree/main/example_files), you will find example source records and example results from after a transformation
