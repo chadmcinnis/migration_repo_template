@@ -2,20 +2,40 @@
     "sourceFiles": [
         "https://docs.google.com/spreadsheets/d/1ac95azO1R41_PGkeLhc6uybAKcfpe6XLyd9-F4jqoTo/edit#gid=301923972"
     ],
-    "defaultLocationCode": "L11",
+    "defaultLocationCode": "void",
     "rules": {
-        "LKR": [
+        "001": [
+            {
+                "target": "hrid",
+                "description": "The human readable ID",
+                "subfield": [],
+                "rules": []
+            }
+        ],
+        "004": [
             {
                 "target": "instanceId",
                 "description": "The instance ID",
-                "subfield": [
-                    "b"
-                ],
                 "rules": [
                     {
                         "conditions": [
                             {
                                 "type": "set_instance_id_by_map"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "008": [
+            {
+                "target": "receiptStatus",
+                "description": "The instance ID",
+                "rules": [
+                    {
+                        "conditions": [
+                            {
+                                "type": "set_receipt_status"
                             }
                         ]
                     }
@@ -68,13 +88,24 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": false,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "3",
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "f",
+                            "g",
+                            "q",
+                            "u"
+                        ],
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
+                                        "type": "set_note_staff_only_via_indicator"
                                     }
                                 ]
                             }
@@ -126,13 +157,21 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": false,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "3",
+                            "a",
+                            "i",
+                            "5",
+                            "6",
+                            "8",
+                            "u"
+                        ],
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
+                                        "type": "set_note_staff_only_via_indicator"
                                     }
                                 ]
                             }
@@ -146,7 +185,7 @@
                 "entity": [
                     {
                         "target": "notes.note",
-                        "description": "",
+                        "description": "Source of acquisition",
                         "subfield": [
                             "a",
                             "b",
@@ -174,14 +213,14 @@
                     },
                     {
                         "target": "notes.holdingsNoteTypeId",
-                        "description": "",
+                        "description": "Source of acquisition",
                         "rules": [
                             {
                                 "conditions": [
                                     {
                                         "type": "set_holding_note_type_id_by_name",
                                         "parameter": {
-                                            "name": "Electronic bookplate"
+                                            "name": "Source of acquisition"
                                         }
                                     }
                                 ]
@@ -190,13 +229,27 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": false,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "f",
+                            "h",
+                            "n",
+                            "o",
+                            "3",
+                            "5",
+                            "6",
+                            "8"
+                        ],
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
+                                        "type": "set_note_staff_only_via_indicator"
                                     }
                                 ]
                             }
@@ -244,13 +297,17 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": false,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "3",
+                            "a",
+                            "u"
+                        ],
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
+                                        "type": "set_note_staff_only_via_indicator"
                                     }
                                 ]
                             }
@@ -301,15 +358,19 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": false,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "3",
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e"
+                        ],
                         "rules": [
                             {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
+                                "conditions": [],
+                                "value": "false"
                             }
                         ]
                     }
@@ -355,8 +416,31 @@
                     },
                     {
                         "target": "notes.staffOnly",
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "3",
+                            "a",
+                            "u"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [],
+                                "value": "false"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "583": [
+            {
+                "entity": [
+                    {
+                        "target": "notes.note",
                         "description": "",
-                        "value": false,
+                        "subfield": [
+                            "x"
+                        ],
                         "rules": [
                             {
                                 "conditions": [
@@ -366,11 +450,38 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "target": "notes.holdingsNoteTypeId",
+                        "description": "",
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "set_holding_note_type_id_by_name",
+                                        "parameter": {
+                                            "name": "Action note"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "target": "notes.staffOnly",
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "x"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [],
+                                "value": "true"
+                            }
+                        ]
                     }
                 ]
-            }
-        ],
-        "583": [
+            },
             {
                 "entity": [
                     {
@@ -423,13 +534,31 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": false,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "3",
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "f",
+                            "h",
+                            "i",
+                            "j",
+                            "k",
+                            "l",
+                            "n",
+                            "o",
+                            "u",
+                            "x",
+                            "z"
+                        ],
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
+                                        "type": "set_note_staff_only_via_indicator"
                                     }
                                 ]
                             }
@@ -483,17 +612,116 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": false,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "3",
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "f",
+                            "m",
+                            "n"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [],
+                                "value": "false"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "845": [
+            {
+                "entity": [
+                    {
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
+                                        "type": "set_holding_note_type_id_by_name",
+                                        "parameter": {
+                                            "name": "Restriction"
+                                        }
                                     }
                                 ]
                             }
-                        ]
+                        ],
+                        "target": "notes.holdingsNoteTypeId",
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "f",
+                            "g",
+                            "q",
+                            "u",
+                            "2",
+                            "3",
+                            "5",
+                            "6",
+                            "8"
+                        ],
+                        "description": "Restriction",
+                        "applyRulesOnConcatenatedData": true
+                    },
+                    {
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "trim_period"
+                                    }
+                                ]
+                            }
+                        ],
+                        "target": "notes.note",
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "f",
+                            "g",
+                            "q",
+                            "u",
+                            "2",
+                            "3",
+                            "5",
+                            "6",
+                            "8"
+                        ],
+                        "description": "Restriction",
+                        "applyRulesOnConcatenatedData": true
+                    },
+                    {
+                        "rules": [
+                            {
+                                "value": "false",
+                                "conditions": []
+                            }
+                        ],
+                        "target": "notes.staffOnly",
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "f",
+                            "g",
+                            "q",
+                            "u",
+                            "2",
+                            "3",
+                            "5",
+                            "6",
+                            "8"
+                        ],
+                        "description": "If true, determines that the note should not be visible for others than staff"
                     }
                 ]
             }
@@ -523,7 +751,7 @@
                     {
                         "conditions": [
                             {
-                                "type": "set_electronic_if_serv,remo"
+                                "type": "set_electronic_if_serv_remo"
                             }
                         ]
                     }
@@ -533,7 +761,7 @@
                 "target": "permanentLocationId",
                 "description": "",
                 "subfield": [
-                    "c"
+                    "b"
                 ],
                 "rules": [
                     {
@@ -541,7 +769,7 @@
                             {
                                 "type": "set_location_id_by_code",
                                 "parameter": {
-                                    "unspecifiedLocationCode": "tech"
+                                    "unspecifiedLocationCode": "void"
                                 }
                             }
                         ]
@@ -554,15 +782,7 @@
                 "subfield": [
                     "k"
                 ],
-                "rules": [
-                    {
-                        "conditions": [
-                            {
-                                "type": "trim_period, trim"
-                            }
-                        ]
-                    }
-                ]
+                "rules": []
             },
             {
                 "target": "callNumber",
@@ -571,16 +791,7 @@
                     "h",
                     "i"
                 ],
-                "rules": [
-                    {
-                        "conditions": [
-                            {
-                                "type": "trim_period, trim"
-                            }
-                        ]
-                    }
-                ],
-                "applyRulesOnConcatenatedData": true
+                "rules": []
             },
             {
                 "target": "callNumberSuffix",
@@ -588,15 +799,15 @@
                 "subfield": [
                     "m"
                 ],
-                "rules": [
-                    {
-                        "conditions": [
-                            {
-                                "type": "trim_period, trim"
-                            }
-                        ]
-                    }
-                ]
+                "rules": []
+            },
+            {
+                "target": "copyNumber",
+                "description": "",
+                "subfield": [
+                    "t"
+                ],
+                "rules": []
             },
             {
                 "target": "shelvingTitle",
@@ -604,15 +815,7 @@
                 "subfield": [
                     "l"
                 ],
-                "rules": [
-                    {
-                        "conditions": [
-                            {
-                                "type": "trim_period, trim"
-                            }
-                        ]
-                    }
-                ]
+                "rules": []
             },
             {
                 "entity": [
@@ -622,15 +825,7 @@
                         "subfield": [
                             "x"
                         ],
-                        "rules": [
-                            {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
-                            }
-                        ]
+                        "rules": []
                     },
                     {
                         "target": "notes.holdingsNoteTypeId",
@@ -653,16 +848,15 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": true,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "x"
+                        ],
                         "rules": [
                             {
                                 "conditions": [],
                                 "value": "true"
                             }
-                        ],
-                        "subfield": [
-                            "x"
                         ]
                     }
                 ]
@@ -675,15 +869,7 @@
                         "subfield": [
                             "z"
                         ],
-                        "rules": [
-                            {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
-                            }
-                        ]
+                        "rules": []
                     },
                     {
                         "target": "notes.holdingsNoteTypeId",
@@ -706,16 +892,15 @@
                     },
                     {
                         "target": "notes.staffOnly",
-                        "description": "",
-                        "value": false,
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "z"
+                        ],
                         "rules": [
                             {
                                 "conditions": [],
-                                "value": "true"
+                                "value": "false"
                             }
-                        ],
-                        "subfield": [
-                            "z"
                         ]
                     }
                 ]
@@ -725,84 +910,88 @@
             {
                 "entity": [
                     {
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "set_electronic_access_relations_id"
+                                    }
+                                ]
+                            }
+                        ],
+                        "target": "electronicAccess.relationshipId",
+                        "subfield": [
+                            "3",
+                            "y",
+                            "u",
+                            "z"
+                        ],
+                        "description": "Relationship between the electronic resource at the location identified and the item described in the record as a whole",
+                        "applyRulesOnConcatenatedData": true
+                    },
+                    {
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "remove_ending_punc, trim"
+                                    }
+                                ]
+                            }
+                        ],
+                        "target": "electronicAccess.uri",
+                        "subfield": [
+                            "u"
+                        ],
+                        "description": "URI"
+                    },
+                    {
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "remove_ending_punc, trim"
+                                    }
+                                ]
+                            }
+                        ],
                         "target": "electronicAccess.linkText",
-                        "description": "",
                         "subfield": [
                             "y"
                         ],
+                        "description": "Link text"
+                    },
+                    {
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
+                                        "type": "remove_ending_punc, trim"
                                     }
                                 ]
                             }
-                        ]
-                    },
-                    {
-                        "target": "electronicAccess.publicNote",
-                        "description": "",
-                        "subfield": [
-                            "z"
                         ],
-                        "rules": [
-                            {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "target": "electronicAccess.uri",
-                        "description": "",
-                        "subfield": [
-                            "u"
-                        ],
-                        "rules": [
-                            {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
                         "target": "electronicAccess.materialsSpecification",
-                        "description": "",
                         "subfield": [
                             "3"
                         ],
-                        "rules": [
-                            {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
-                            }
-                        ]
+                        "description": "Materials Specified"
                     },
                     {
-                        "target": "electronicAccess.relationshipId",
-                        "description": "",
-                        "subfield": [
-                            "u"
-                        ],
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "set_url_relationship"
+                                        "type": "remove_ending_punc, trim"
                                     }
                                 ]
                             }
-                        ]
+                        ],
+                        "target": "electronicAccess.publicNote",
+                        "subfield": [
+                            "z"
+                        ],
+                        "description": "URL public note"
                     }
                 ]
             }
@@ -816,15 +1005,7 @@
                         "subfield": [
                             "a"
                         ],
-                        "rules": [
-                            {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
-                            }
-                        ]
+                        "rules": []
                     },
                     {
                         "target": "holdingsStatements.note",
@@ -836,45 +1017,29 @@
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "868": [
-            {
-                "entity": [
-                    {
-                        "target": "holdingsStatementsForIndexes.statement",
-                        "description": "",
-                        "subfield": [
-                            "a"
-                        ],
-                        "rules": [
-                            {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
+                                        "type": "get_value_if_subfield_is_empty",
+                                        "parameter": {
+                                            "value": "-"
+                                        }
                                     }
                                 ]
                             }
                         ]
                     },
                     {
-                        "target": "holdingsStatementsForIndexes.note",
+                        "target": "holdingsStatements.staffNote",
                         "description": "",
                         "subfield": [
-                            "z"
+                            "x"
                         ],
                         "rules": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "trim_period, trim"
+                                        "type": "get_value_if_subfield_is_empty",
+                                        "parameter": {
+                                            "value": "-"
+                                        }
                                     }
                                 ]
                             }
@@ -892,15 +1057,7 @@
                         "subfield": [
                             "a"
                         ],
-                        "rules": [
-                            {
-                                "conditions": [
-                                    {
-                                        "type": "trim_period, trim"
-                                    }
-                                ]
-                            }
-                        ]
+                        "rules": []
                     },
                     {
                         "target": "holdingsStatementsForSupplements.note",
@@ -912,11 +1069,313 @@
                             {
                                 "conditions": [
                                     {
+                                        "type": "get_value_if_subfield_is_empty",
+                                        "parameter": {
+                                            "value": "-"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "target": "holdingsStatements.staffNote",
+                        "description": "",
+                        "subfield": [
+                            "x"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "get_value_if_subfield_is_empty",
+                                        "parameter": {
+                                            "value": "-"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "868": [
+            {
+                "entity": [
+                    {
+                        "target": "holdingsStatementsForIndexes.statement",
+                        "description": "",
+                        "subfield": [
+                            "a"
+                        ],
+                        "rules": []
+                    },
+                    {
+                        "target": "holdingsStatementsForIndexes.note",
+                        "description": "",
+                        "subfield": [
+                            "z"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "get_value_if_subfield_is_empty",
+                                        "parameter": {
+                                            "value": "-"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "target": "holdingsStatements.staffNote",
+                        "description": "",
+                        "subfield": [
+                            "x"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "get_value_if_subfield_is_empty",
+                                        "parameter": {
+                                            "value": "-"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "876": [
+            {
+                "entity": [
+                    {
+                        "target": "notes.note",
+                        "applyRulesOnConcatenatedData": true,
+                        "description": "",
+                        "subFieldDelimiter": [
+                            {
+                                "value": " | ",
+                                "subfields": [
+                                    "a",
+                                    "b",
+                                    "c",
+                                    "d",
+                                    "e",
+                                    "h",
+                                    "j",
+                                    "l",
+                                    "p",
+                                    "r",
+                                    "t",
+                                    "z",
+                                    "3"
+                                ]
+                            }
+                        ],
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "h",
+                            "j",
+                            "l",
+                            "p",
+                            "r",
+                            "t",
+                            "z",
+                            "3"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
                                         "type": "trim_period, trim"
                                     }
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "target": "notes.holdingsNoteTypeId",
+                        "description": "",
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "set_holding_note_type_id_by_name",
+                                        "parameter": {
+                                            "name": "Bound with item data"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "target": "notes.staffOnly",
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "h",
+                            "j",
+                            "l",
+                            "p",
+                            "r",
+                            "t",
+                            "z",
+                            "3"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [],
+                                "value": "false"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "entity": [
+                    {
+                        "target": "notes.note",
+                        "description": "",
+                        "subfield": [
+                            "x"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "trim_period, trim"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "target": "notes.holdingsNoteTypeId",
+                        "description": "",
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "set_holding_note_type_id_by_name",
+                                        "parameter": {
+                                            "name": "Bound with item data"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "target": "notes.staffOnly",
+                        "description": "If true, determines that the note should not be visible for others than staff",
+                        "subfield": [
+                            "x"
+                        ],
+                        "rules": [
+                            {
+                                "conditions": [],
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "948": [
+            {
+                "entity": [
+                    {
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "set_holding_note_type_id_by_name",
+                                        "parameter": {
+                                            "name": "Local Statistical Note"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "target": "notes.holdingsNoteTypeId",
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "f",
+                            "h",
+                            "i",
+                            "j",
+                            "x"
+                        ],
+                        "description": "Instance note type id",
+                        "applyRulesOnConcatenatedData": true
+                    },
+                    {
+                        "rules": [
+                            {
+                                "conditions": [
+                                    {
+                                        "type": "trim_period"
+                                    }
+                                ]
+                            }
+                        ],
+                        "target": "notes.note",
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "f",
+                            "h",
+                            "i",
+                            "j",
+                            "x"
+                        ],
+                        "description": "Local Statistical Note",
+                        "applyRulesOnConcatenatedData": true
+                    },
+                    {
+                        "rules": [
+                            {
+                                "value": "true",
+                                "conditions": []
+                            }
+                        ],
+                        "target": "notes.staffOnly",
+                        "subfield": [
+                            "a",
+                            "b",
+                            "c",
+                            "d",
+                            "e",
+                            "f",
+                            "h",
+                            "i",
+                            "j",
+                            "x"
+                        ],
+                        "description": "If true, determines that the note should not be visible for others than staff"
                     }
                 ]
             }
