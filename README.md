@@ -21,16 +21,19 @@ mfhd_rules.json  | no | yes | no | no |  no   |   no
 item_mapping.json  | no | no | no | yes |  no   |   no
 holdings_mapping.json  | no | no | yes |  no   |   no
 locations.tsv  | no | yes | yes | yes |  no   |   no
+temp_locations.tsv.optional*  | no | no | no | optional |  no   |   no
 material_types.tsv  | no | no | no |  yes   |   no
 loan_types.tsv  | no | no | no | yes |  no   |   no
+temp_loan_types.tsv.optional*  | no | no | no | optional |  no   |   no
 call_number_type_mapping.tsv  | no | no | optional | optional |  no   |   no
 statcodes.tsv  | no | no | optional | optional |  no   |   no
 item_statuses.tsv | no | no | no | optional    |  no   |   no
 post_loan_migration_statuses.tsv | no | no | no | no    |  optional  |   no
 patron_types.tsv | no | no | no | no    |  no  |   yes
-user_mapping.json* | no | no | no | no    |  no  |   yes
+user_mapping.json** | no | no | no | no    |  no  |   yes
 
-\* Currently, the user_mapping file name needs to reflect the name of the user data file it maps from.
+\* remove the .optional file ending to let the scripts know you want these mappings enabled.   
+\*\* Currently, the user_mapping file name needs to reflect the name of the user data file it maps from.
 ## marc-instance-mapping-rules.json
 These are the mapping rules from MARC21 bib records to FOLIO instances. The rules are stored in the tenant, but it is good practice to keep them under version control so you can maintain the customizations as the mapping rules evolve.For more information on syntax etc, read the [documentation](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md).
 
