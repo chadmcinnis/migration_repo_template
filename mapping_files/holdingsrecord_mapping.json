@@ -31,6 +31,12 @@
          "description": ""
       },
       {
+         "folio_field": "legacyIdentifier",
+         "legacy_field": "Z30_REC_KEY",
+         "value": "",
+         "description": ""
+      },
+      {
          "folio_field": "callNumberSuffix",
          "legacy_field": "Not mapped",
          "value": "",
@@ -92,7 +98,7 @@
       },
       {
          "folio_field": "formerIds[0]",
-         "legacy_field": "Not mapped",
+         "legacy_field": "Z30_REC_KEY",
          "value": "",
          "description": ""
       },
@@ -176,7 +182,7 @@
       },
       {
          "folio_field": "instanceId",
-         "legacy_field": "Not mapped",
+         "legacy_field": "fake_instance_id",
          "value": "",
          "description": ""
       },
@@ -206,7 +212,7 @@
       },
       {
          "folio_field": "permanentLocationId",
-         "legacy_field": "PERM_LOCATION",
+         "legacy_field": "Z30_SUB_LIBRARY",
          "value": "",
          "description": ""
       },

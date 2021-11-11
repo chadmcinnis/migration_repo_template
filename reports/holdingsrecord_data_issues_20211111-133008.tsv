@@ -1,0 +1,2 @@
+RECORD FAILED	000000950000010	One or many required properties empty	["Missing: instanceId", "Missing: permanentLocationId"]
+RECORD FAILED	000000951000010	Bib id not in instance id map.	000000167
