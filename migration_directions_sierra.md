@@ -44,7 +44,7 @@ When exporting data from Create lists, please use comma as delimiter, and semi-c
 **IC** and **library** verify that all relevant [mapping_files](mapping_files) are up-to-date and correct.
 
 ### Item records
-**IC** exports a file of .i records in json format using the Sierra APIs.
+**library** exports a file of .i records in tsv format
 
 After exporting the data, **IC** will
 - Transform the items into FOLIO holdings and items
@@ -53,7 +53,7 @@ After exporting the data, **IC** will
 **IC** and **library** verify that all relevant [mapping_files](mapping_files) are up-to-date and correct.
 
 ### Patron records
-**Library** exports a file of .p records in csv format using Create lists. 
+**Library** exports a file of .p records in tsv format 
 
 |Sierra fields to export|
 |---|
@@ -87,7 +87,7 @@ After receiving the data, **IC** will
 We expect the number of open requests to be so low that the migration will most easily be done manually by **library**.
 
 ### Vendor records
-**Library** exports a file of .v records in csv format using Create lists. 
+**Library** exports a file of .v records in tsv format
 
 |Sierra fields to export|
 |---|
@@ -100,7 +100,7 @@ After receiving the data, **IC** will
 - Load the organizations into FOLIO
 
 ### Order records
-**Library** exports a file of .o records in csv format using Create lists. 
+**Library** exports a file of .o records in tsv format
 
 |Sierra fields to export|
 |---|
@@ -116,11 +116,11 @@ After receiving the data, **IC** will
 Add a new column for each new export
 |Data type|Name & date|Name & date|
 |---|---|---|
-|Bibs|name.csv yyyymmdd|name.csv yyyymmdd|
-|Items|name.csv yyyymmdd|name.csv yyyymmdd|
-|Check-in|name.csv yyyymmdd|name.csv yyyymmdd|
-|Patrons|name.csv yyyymmdd|name.csv yyyymmdd|
-|Loans|name.csv yyyymmdd|name.csv yyyymmdd|
-|Requests|name.csv yyyymmdd|name.csv yyyymmdd
-|Vendors|name.csv yyyymmdd|name.csv yyyymmdd
-|Orders|name.csv yyyymmdd|name.csv yyyymmdd
+|Bibs|name.tsv yyyymmdd|name.tsv yyyymmdd|
+|Items|name.tsv yyyymmdd|name.tsv yyyymmdd|
+|Check-in|name.tsv yyyymmdd|name.tsv yyyymmdd|
+|Patrons|name.tsv yyyymmdd|name.tsv yyyymmdd|
+|Loans|name.tsv yyyymmdd|name.tsv yyyymmdd|
+|Requests|name.tsv yyyymmdd|name.tsv yyyymmdd
+|Vendors|name.tsv yyyymmdd|name.tsv yyyymmdd
+|Orders|name.tsv yyyymmdd|name.tsv yyyymmdd
