@@ -116,7 +116,7 @@ After receiving the data, **IC** will
 Add a new column for each new export
 |Data type|Name & date|Name & date|
 |---|---|---|
-|Bibs|name.tsv yyyymmdd|name.tsv yyyymmdd|
+|Bibs|name.mrc yyyymmdd|name.mrc yyyymmdd|
 |Items|name.tsv yyyymmdd|name.tsv yyyymmdd|
 |Check-in|name.tsv yyyymmdd|name.tsv yyyymmdd|
 |Patrons|name.tsv yyyymmdd|name.tsv yyyymmdd|
