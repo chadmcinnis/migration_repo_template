@@ -1,0 +1,98 @@
+{
+    "libraryInformation": {
+        "tenantId": "fs09000000",
+        "okapiUrl": "https://okapi-bugfest-juniper.folio.ebsco.com",
+        "okapiUsername": "folio",
+        "libraryName": "Bugfest library",
+        "logLevelDebug": false,
+        "folioRelease": "juniper",
+        "addTimeStampToFileNames": true,
+        "iterationIdentifier": "test_run"
+    },
+    "migrationTasks": [
+        {
+            "name": "bibs",
+            "migrationTaskType": "BibsTransformer",
+            "useTenantMappingRules": true,
+            "ilsFlavour": "voyager",
+            "hridHandling": "default",
+            "files": [
+                {
+                    "file_name": "bib_example.mrc",
+                    "suppressed": false
+                }
+            ]
+        },
+        {
+            "name": "marc_holdings",
+            "migrationTaskType": "HoldingsMarcTransformer",
+            "mfhdMappingFileName": "mfhd_rules.json",
+            "locationMapFileName": "locations.tsv",
+            "defaultCallNumberTypeName": "Library of Congress classification",
+            "defaultHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+            "useTenantMappingRules": false,
+            "hridHandling": "default",
+            "files": [
+                {
+                    "file_name": "holding.mrc",
+                    "suppressed": false
+                }
+            ]
+        },
+        {
+            "name": "csv_holdings",
+            "migrationTaskType": "HoldingsCsvTransformer",
+            "holdingsMapFileName": "holdingsrecord_mapping.json",
+            "locationMapFileName": "locations.tsv",
+            "defaultCallNumberTypeName": "Library of Congress classification",
+            "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
+            "holdingsMergeCriteria": "clb",
+            "defaultHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+            "hridHandling": "default",
+            "files": [
+                {
+                    "file_name": "items.tsv"
+                }
+            ]
+        },
+        {
+            "name": "items",
+            "migrationTaskType": "ItemsTransformer",
+            "hridHandling": "default",
+            "defaultCallNumberTypeName": "Library of Congress classification",
+            "itemsMappingFileName": "item_mapping.json",
+            "locationMapFileName": "locations.tsv",
+            "tempLocationMapFileName": "temp_locations.tsv",
+            "materialTypesMapFileName": "material_types.tsv",
+            "loanTypesMapFileName": "loan_types.tsv",
+            "tempLoanTypesMapFileName": "temp_loan_types.tsv",
+            "statisticalCodesMapFileName": "statcodes.tsv",
+            "itemStatusesMapFileName": "item_statuses.tsv",
+            "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
+            "files": [
+                {
+                    "file_name": "items.tsv"
+                }
+            ]
+        },
+        {
+            "name": "bibs_poster",
+            "migrationTaskType": "BatchPoster",
+            "objectType": "Instances",
+            "batchSize": 250,
+            "file": {
+                "file_name": "folio_instances_month_year_bibs.json"
+            }
+        },
+        {
+            "name": "user_transform",
+            "migrationTaskType": "UserTransformer",
+            "groupMapPath": "user_groups.tsv",
+            "userMappingFileName": "user_mapping.json",
+            "useGroupMap": true,
+            "userFile": {
+                "file_name": "staff.tsv"
+            }
+        }
+    ]
+}
