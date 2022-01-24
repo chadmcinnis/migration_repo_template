@@ -79,7 +79,7 @@
             "name": "bibs_poster",
             "migrationTaskType": "BatchPoster",
             "objectType": "Instances",
-            "batchSize": 250,
+            "batchSize": 249,
             "file": {
                 "file_name": "folio_instances_test_run_20211213-184821_bibs.json"
             }
