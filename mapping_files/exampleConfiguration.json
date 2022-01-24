@@ -1,9 +1,9 @@
 {
     "libraryInformation": {
-        "tenantId": "fs09000000",
-        "okapiUrl": "https://okapi-bugfest-juniper.folio.ebsco.com",
-        "okapiUsername": "folio",
-        "libraryName": "Bugfest library",
+        "tenantId": "diku",
+        "okapiUrl": "https://folio-juniper-okapi.dev.folio.org",
+        "okapiUsername": "diku_admin",
+        "libraryName": "FOLIO Reference env",
         "logLevelDebug": false,
         "folioRelease": "juniper",
         "addTimeStampToFileNames": true,
@@ -81,7 +81,16 @@
             "objectType": "Instances",
             "batchSize": 250,
             "file": {
-                "file_name": "folio_instances_month_year_bibs.json"
+                "file_name": "folio_instances_test_run_20211213-184821_bibs.json"
+            }
+        },
+        {
+            "name": "srs_poster",
+            "migrationTaskType": "BatchPoster",
+            "objectType": "SRS",
+            "batchSize": 250,
+            "file": {
+                "file_name": "folio_srs_test_run_20211213-184821_bibs.json"
             }
         },
         {
