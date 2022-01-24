@@ -88,7 +88,7 @@
             "name": "srs_poster",
             "migrationTaskType": "BatchPoster",
             "objectType": "SRS",
-            "batchSize": 250,
+            "batchSize": 249,
             "file": {
                 "file_name": "folio_srs_test_run_20211213-184821_bibs.json"
             }
