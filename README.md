@@ -1,6 +1,8 @@
 # Migration Repo template
 This repo is a template repository for the files needed for migrating Inventory data from a source system into FOLIO 
 
+TLDR; Create a new private repository based on this template. Clone it and then run create_folder_structure.sh 
+
 # FOLIO Inventory data migration process
 This template plays a vital part in a process together with other repos allowing you to perform bibliographic data migration from a legacy ILS into FOLIO. For more information on the process, head over to the linked repos below.
 In order to perform migrations according to this process, you need to clone the following repositories:   
