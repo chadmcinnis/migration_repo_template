@@ -11,6 +11,16 @@
     },
     "migrationTasks": [
         {
+            "name": "organizations",
+            "migrationTaskType": "OrganizationsTransformer",
+            "organizationsMapFileName": "organization_mapping.json",
+            "files": [
+                {
+                    "file_name": "orgs_example.tsv"
+                }
+            ]
+        },
+        {
             "name": "bibs",
             "migrationTaskType": "BibsTransformer",
             "useTenantMappingRules": true,
