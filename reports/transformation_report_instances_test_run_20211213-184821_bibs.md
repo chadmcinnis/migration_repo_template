@@ -1,5 +1,5 @@
 # Bibliographic records transformation results   
-Time Run: 2021-11-11T12:31:02.118261   
+Time Run: 2021-12-13T17:49:13.563504   
 <br/>Data errors preventing records from being migrated are marked **FIX BEFORE MIGRATION**. The library is advised to clean up these errors in the source data.<br/><br/> The sections related to field counts and mapping results are marked **REVIEW**. These do not indicate errors preventing records from being migrated, but may point to data anomalies or in the mappings. The library should review these to make sure that the numbers are what one would expect, knowing the source data. Is this the expected number of serials? Is this the expected number of cartographic materials?
    
 ## General statistics    
@@ -27,30 +27,13 @@ n | 1
    
 ## HRID Handling    
 There are two ways of handling HRIDs. The default behaviour is to take the current 001 and move that to a new 035. This will also emerge as an Identifier on the Inventory Instances. The 001 and Instance HRID will be generated from the HRID settings in FOLIO. The second option is to maintain the 001s in the records, and also add this as the Instance HRID    
-<details><summary>Click to expand all 3 things</summary>     
+<details><summary>Click to expand all 4 things</summary>     
    
 Measure | Count   
 --- | ---:   
 Added 035 from 001 | 1   
 Created HRID using default settings | 1   
-</details>   
-   
-## Mappings not found for field    
-Library action: **REVIEW** <br/>These are the MARC tags that occurred in the bib records that did not have any mappings configured. If you think the contents of these fields would be valuable to have in Inventory, please tell your Implementation consultant. The MARC recors will still contain the data, so they will still be part of the data you export to your OPAC/Discovery system    
-<details><summary>Click to expand all 11 things</summary>     
-   
-Measure | Count   
---- | ---:   
-001 | 1   
-003 | 1   
-005 | 1   
-006 | 1   
-007 | 1   
-008 | 1   
-337 | 1   
-347 | 1   
-773 | 1   
-FMT | 1   
+Values in 003: DE-He213 | 1   
 </details>   
    
 ## Mapped identifier types    
@@ -122,11 +105,10 @@ Measure | Count
    
 ## Instance format ids handling (337 + 338))    
     
-<details><summary>Click to expand all 4 things</summary>     
+<details><summary>Click to expand all 3 things</summary>     
    
 Measure | Count   
 --- | ---:   
-338$2 (Source) is set to rdacarrier. Everything starting with rdacarrier will get mapped. | 1   
 Successful match  - "cr"->computer -- online resource | 1   
 Successful match  - cr->computer -- online resource | 1   
 </details>   
@@ -147,7 +129,7 @@ Library action: **REVIEW** <br/>The created FOLIO instances contain the followin
    
 Measure | Count   
 --- | ---:   
-text (from 336$b) | 1   
+336$b text mapped from txt | 1   
 </details>   
    
 ## Matched Modes of issuance code    
