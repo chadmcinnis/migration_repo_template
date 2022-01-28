@@ -7,7 +7,6 @@ TLDR; Create a new private repository based on this template. Clone it and then 
 This template plays a vital part in a process together with other repos allowing you to perform bibliographic data migration from a legacy ILS into FOLIO. For more information on the process, head over to the linked repos below.
 In order to perform migrations according to this process, you need to clone the following repositories:   
 * [MARC21-to-FOLIO](https://github.com/FOLIO-FSE/MARC21-To-FOLIO)
-* [service_tools](https://github.com/FOLIO-FSE/service_tools)
 * [migration_repo_template](https://github.com/FOLIO-FSE/migration_repo_template)
 
 
