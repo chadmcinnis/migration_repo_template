@@ -1,5 +1,4 @@
 mkdir -p data/instances;
-mkdir -p data/instances
 mkdir -p data/holdings;
 mkdir -p data/items;
 mkdir -p data/users;

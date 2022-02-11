@@ -584,10 +584,7 @@
           {
             "conditions": [
               {
-                "type": "set_location_id_by_code",
-                "parameter": {
-                  "unspecifiedLocationCode": "MIGRATION"
-                }
+                "type": "set_location_id_by_code"
               }
             ]
           }

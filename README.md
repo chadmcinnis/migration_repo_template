@@ -4,11 +4,13 @@ This repo is a template repository for the files needed for migrating Inventory 
 TLDR; Create a new private repository based on this template. Clone it and then run create_folder_structure.sh 
 
 # FOLIO Inventory data migration process
-This template plays a vital part in a process together with other repos allowing you to perform bibliographic data migration from a legacy ILS into FOLIO. For more information on the process, head over to the linked repos below.
-In order to perform migrations according to this process, you need to clone the following repositories:   
-* [MARC21-to-FOLIO](https://github.com/FOLIO-FSE/MARC21-To-FOLIO)
-* [migration_repo_template](https://github.com/FOLIO-FSE/migration_repo_template)
+This repository template plays a vital part in a process together with other repos allowing you to perform data migrations from a legacy ILS into FOLIO. 
 
+The program you will need to run the process is [FOLIO Migration Tools](https://github.com/FOLIO-FSE/folio_migration_tools). This is a Python program, not yet on PyPi, so you will need to clone it.
+
+The toolkit requires you to run the transformation an data loading in sequence, and each step relies on previous migrations steps, like the existance of a map file with legacy system IDs and their FOLIO equivalents. 
+The below picture shows the proposed migration steps for legacy objects into FOLIO:
+![image](https://user-images.githubusercontent.com/1894384/139079124-b31b716f-281b-4784-b73e-a4567ee3e097.png)
 
 # Mapping files
 The repo contains the following mapping files in the Mapping files folder.
@@ -22,19 +24,19 @@ mfhd_rules.json  | no | yes | no | no |  no   |   no
 item_mapping.json  | no | no | no | yes |  no   |   no
 holdings_mapping.json  | no | no | yes |  no   |   no
 locations.tsv  | no | yes | yes | yes |  no   |   no
-temp_locations.tsv.optional*  | no | no | no | optional |  no   |   no
+temp_locations.tsv  | no | no | no | optional |  no   |   no
 material_types.tsv  | no | no | no |  yes   |   no
 loan_types.tsv  | no | no | no | yes |  no   |   no
-temp_loan_types.tsv.optional*  | no | no | no | optional |  no   |   no
+temp_loan_types.tsv  | no | no | no | optional |  no   |   no
 call_number_type_mapping.tsv  | no | no | optional | optional |  no   |   no
 statcodes.tsv  | no | no | optional | optional |  no   |   no
 item_statuses.tsv | no | no | no | optional    |  no   |   no
 post_loan_migration_statuses.tsv | no | no | no | no    |  optional  |   no
 patron_types.tsv | no | no | no | no    |  no  |   yes
-user_mapping.json** | no | no | no | no    |  no  |   yes
+user_mapping.json | no | no | no | no    |  no  |   yes
+department_mapping.tsv | no | no | no | no    |  no  |   yes
 
-\* remove the .optional file ending to let the scripts know you want these mappings enabled.   
-\*\* Currently, the user_mapping file name needs to reflect the name of the user data file it maps from.
+
 ## marc-instance-mapping-rules.json
 These are the mapping rules from MARC21 bib records to FOLIO instances. The rules are stored in the tenant, but it is good practice to keep them under version control so you can maintain the customizations as the mapping rules evolve.For more information on syntax etc, read the [documentation](https://github.com/folio-org/mod-source-record-manager/blob/master/RuleProcessorApi.md).
 
@@ -103,8 +105,8 @@ The resulting FOLIO Item would look like this:
 	...
 }
 ```
-### Default fields
-All mapping files (locations.tsv, material_types.tsv, locations.tsv etc) have a mechanism that allows you to add * to legacy fields in a row, and add the default value from folio in the folio_code/folio_name column. If the mapping fails, the script will assign this value to the records created. Good practice is to have migration-specific value for defaults to be able to locate the records in FOLIO
+### Fallback values in reference data mapping
+All mapping files (locations.tsv, material_types.tsv, locations.tsv etc) have a mechanism that allows you to add * to legacy fields in a row, and add the falback value from folio in the folio_code/folio_name column. If the mapping fails, the script will assign this value to the records created. Good practice is to have migration-specific value as a falback value to be able to locate the records in FOLIO
 
 
 ## locations.tsv
@@ -113,7 +115,6 @@ These mappings allow for some complexity. These are the mappings of the legacy a
 ------------ | ------------- | -------------
  AFA | AFAS | AFAS   
  AFA  |  * |  *    
-
  
 The legacy_code part is needed for both Holdings migratiom. For Item migration, the source fields can be used (Z30_COLLECTION in this case). You can add as many source fields as you like for the Items
 
@@ -177,3 +178,180 @@ items_transformation_report.md | A file containing various breakdowns of the tra
 marc_xml_dump.xml | A MARCXML dump of the bib records, with the proper 001:s and 999 fields added | For pre-loading a Discovery system.
 srs.json | FOLIO SRS records in json format. One per row in the file | To be loaded into FOLIO using the batch APIs
 
+
+## SRS record Loading
+In order for SRS record loading to run, you need a snapshot object in the FOLIO database. The snapshot ID (jobExecutionId) is hard coded into the SRS records by the transformation scripts. To do this, do the following:    
+Make a POST request to your FOLIO tenant to this endpoint:   
+```
+{{baseUrl}}/source-storage/snapshots
+```
+with the following payload:   
+```
+{ 
+
+    "jobExecutionId": "67dfac11-1caf-4470-9ad1-d533f6360bdd", 
+    "status": "PARSING_IN_PROGRESS", 
+    "processingStartedDate": "2020-12-30T14:33:50.478+0000", 
+    "metadata": { 
+        "createdDate": "2020-12-30T14:33:50.478+0000", 
+        "createdByUserId": "0280835d-b08d-4187-969d-9b4ecc247eae", 
+        "updatedDate": "2020-12-30T14:33:50.478+0000", 
+        "updatedByUserId": "0280835d-b08d-4187-969d-9b4ecc247eae" 
+    } 
+} 
+```
+
+## HRID handling
+### Current implementation:   
+Download the HRID handling settings from the tenant. 
+**If there are HRID handling in the mapping rules:**
+- The HRID is set on the Instance
+- The 001 in the MARC21 record (bound for SRS) is replaced with this HRID.
+
+**If the mapping-rules specify no HRID handling or the field designated for HRID contains no value:**
+- The HRID is being constructed from the HRID settings
+- Pad the number in the HRID Settings so length is 11
+- A new 035 field is created and populated with the value from 001
+- The 001 in the MARC21 record (bound for SRS) is replaced with this HRID.
+
+
+## Relevant FOLIO community documentation
+* [Instance Metadata Elements](https://docs.google.com/spreadsheets/d/1RCZyXUA5rK47wZqfFPbiRM0xnw8WnMCcmlttT7B3VlI/edit#gid=952741439)
+* [Recommended MARC mapping to Inventory Instances](https://docs.google.com/spreadsheets/d/11lGBiPoetHuC3u-onVVLN4Mj5KtVHqJaQe4RqCxgGzo/edit#gid=1891035698)
+* [Recommended MFHD to Inventory Holdings mapping ](https://docs.google.com/spreadsheets/d/1ac95azO1R41_PGkeLhc6uybAKcfpe6XLyd9-F4jqoTo/edit#gid=301923972)
+* [Holdingsrecord JSON Schema](https://github.com/folio-org/mod-inventory-storage/blob/master/ramls/holdingsrecord.json)
+* [FOLIO Instance storage JSON Schema](https://github.com/folio-org/mod-inventory-storage/blob/master/ramls/instance.json)
+* [FOLIO Intance (BL) JSON Schema](https://github.com/folio-org/mod-inventory/blob/master/ramls/instance.json)
+* [Inventory elements - Beta](https://docs.google.com/spreadsheets/d/1RCZyXUA5rK47wZqfFPbiRM0xnw8WnMCcmlttT7B3VlI/edit#gid=901484405)
+* [MARC Mappings Information](https://wiki.folio.org/display/FOLIOtips/MARC+Mappings+Information)
+
+# Perform a test migration
+The mapping files and example data in this repo will enable you perform a migration against the latest FOLIO bugfest enironment. Everything is configured except for the missing FOLIO user password.
+This step-by-step guide will take you through the steps involved. If there are no more steps, we are still working on these example records
+
+## Before you begin
+* Move everything under the example_data folder into the data folder.
+* Setup pipenv using either the Pipfile or the requirements.txt
+
+## Transform bibs
+### Configuration
+This configuration piece in the configuration file determines the behaviour
+```
+ {
+    "name": "transform_bibs",
+    "migrationTaskType": "BibsTransformer",
+    "useTenantMappingRules": true,
+    "ilsFlavour": "tag001",
+    "tags_to_delete": [
+        "841",
+        "852"
+    ],
+    "files": [
+        {
+            "file_name": "bibs.mrc",
+            "suppressed": false
+        }
+    ]
+}
+```
+### Syntax to run
+``` 
+ pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json transform_bibs --base_folder PATH_TO_migration_repo_template/
+
+```
+## Post tranformed Instances and SRS records 
+### Configuration
+These configuration pieces in the configuration file determines the behaviour
+```
+{
+    "name": "post_bibs",
+    "migrationTaskType": "BatchPoster",
+    "objectType": "Instances",
+    "batchSize": 250,
+    "file": {
+        "file_name": "folio_instances_test_run_transform_bibs.json"
+    }
+},
+{
+    "name": "post_srs_bibs",
+    "migrationTaskType": "BatchPoster",
+    "objectType": "SRS",
+    "batchSize": 250,
+    "file": {
+        "file_name": "folio_srs_instances_test_run_transform_bibs.json"
+    }
+}
+```
+### Syntax to run
+``` 
+ pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json post_bibs --base_folder PATH_TO_migration_repo_template/
+
+  pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json post_srs_bibs --base_folder PATH_TO_migration_repo_template/
+
+```
+
+## Transform MFHD records to holdings and SRS holdings 
+### Configuration
+This configuration piece in the configuration file determines the behaviour
+```
+{
+    "name": "transform_mfhd",
+    "migrationTaskType": "HoldingsMarcTransformer",
+    "mfhdMappingFileName": "mfhd_rules.json",
+    "locationMapFileName": "locations.tsv",
+    "defaultCallNumberTypeName": "Library of Congress classification",
+    "defaultHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+    "useTenantMappingRules": false,
+    "hridHandling": "default",
+    "createSourceRecords": true,
+    "files": [
+        {
+            "file_name": "holding.mrc",
+            "suppressed": false
+        }
+    ]
+}
+```
+### Syntax to run
+``` 
+pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json transform_mfhd --base_folder PATH_TO_migration_repo_template/
+```
+
+## Post tranformed MFHDs and Holdingsrecords to FOLIO 
+### Configuration
+These configuration pieces in the configuration file determines the behaviour
+```
+{
+    "name": "post_holdingsrecords_from_mfhd",
+    "migrationTaskType": "BatchPoster",
+    "objectType": "Holdings",
+    "batchSize": 250,
+    "file": {
+        "file_name": "folio_holdings_test_run_transform_mfhd.json"
+    }
+},
+{
+    "name": "post_srs_mfhds",
+    "migrationTaskType": "BatchPoster",
+    "objectType": "SRS",
+    "batchSize": 250,
+    "file": {
+        "file_name": "folio_srs_holdings_test_run_transform_mfhd.json"
+    }
+}
+```
+### Syntax to run
+``` 
+pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json post_holdingsrecords_from_mfhd --base_folder PATH_TO_migration_repo_template/
+
+pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json post_srs_mfhds --base_folder PATH_TO_migration_repo_template/
+```
+
+## Post tranformed Instances and SRS records 
+### Configuration
+This configuration piece in the configuration file determines the behaviour
+```
+```
+### Syntax to run
+``` 
+```
