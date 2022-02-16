@@ -212,7 +212,7 @@
       },
       {
          "folio_field": "permanentLocationId",
-         "legacy_field": "Z30_SUB_LIBRARY",
+         "legacy_field": "PERM_LOCATION",
          "value": "",
          "description": ""
       },

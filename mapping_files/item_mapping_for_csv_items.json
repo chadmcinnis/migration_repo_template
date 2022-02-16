@@ -26,7 +26,7 @@
       },
       {
          "folio_field": "chronology",
-         "legacy_field": "Not mapped",
+         "legacy_field": "Z30_CHRONOLOGICAL_I",
          "value": "",
          "description": ""
       },
@@ -140,25 +140,31 @@
       },
       {
          "folio_field": "enumeration",
-         "legacy_field": "Not mapped",
+         "legacy_field": "Z30_ENUMERATION_A",
          "value": "",
          "description": ""
       },
       {
          "folio_field": "formerIds[0]",
-         "legacy_field": "Not mapped",
+         "legacy_field": "fake_instance_id",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "formerIds[1]",
+         "legacy_field": "fake_instance_id",
          "value": "",
          "description": ""
       },
       {
          "folio_field": "holdingsRecordId",
-         "legacy_field": "Z30_HOL_DOC_NUMBER_X",
+         "legacy_field": "fake_instance_id",
          "value": "",
-         "description": "Set to Z30_REC_KEY if using holdingsCSVTransformer"
+         "description": ""
       },
       {
          "folio_field": "hrid",
-         "legacy_field": "Not mapped",
+         "legacy_field": "Z30_REC_KEY",
          "value": "",
          "description": ""
       },
@@ -188,7 +194,7 @@
       },
       {
          "folio_field": "itemLevelCallNumber",
-         "legacy_field": "Not mapped",
+         "legacy_field": "Z30_CALL_NO_2",
          "value": "",
          "description": ""
       },
@@ -253,24 +259,6 @@
          "description": ""
       },
       {
-         "folio_field": "notes[1].itemNoteTypeId",
-         "legacy_field": "Z30_NOTE_INTERNAL",
-         "value": "bcf59f24-afa2-43dd-b928-e1b9872a96ff",
-         "description": ""
-      },
-      {
-         "folio_field": "notes[1].note",
-         "legacy_field": "Z30_NOTE_INTERNAL",
-         "value": "",
-         "description": ""
-      },
-      {
-         "folio_field": "notes[1].staffOnly",
-         "legacy_field": "Z30_NOTE_INTERNAL",
-         "value": true,
-         "description": ""
-      },
-      {
          "folio_field": "numberOfMissingPieces",
          "legacy_field": "Not mapped",
          "value": "",
@@ -284,13 +272,13 @@
       },
       {
          "folio_field": "permanentLoanTypeId",
-         "legacy_field": "Z30_COLLECTION",
+         "legacy_field": "Z30_MATERIAL",
          "value": "",
          "description": ""
       },
       {
          "folio_field": "permanentLocationId",
-         "legacy_field": "Z30_SUB_LIBRARY",
+         "legacy_field": "Not mapped",
          "value": "",
          "description": ""
       },
