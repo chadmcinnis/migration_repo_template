@@ -50,7 +50,7 @@
             "mfhdMappingFileName": "mfhd_rules.json",
             "locationMapFileName": "locations.tsv",
             "defaultCallNumberTypeName": "Library of Congress classification",
-            "defaultHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+            "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
             "useTenantMappingRules": false,
             "hridHandling": "default",
             "createSourceRecords": true,
@@ -87,7 +87,7 @@
             "defaultCallNumberTypeName": "Library of Congress classification",
             "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
             "holdingsMergeCriteria": "clb",
-            "defaultHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+            "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
             "hridHandling": "default",
             "files": [
                 {
@@ -114,7 +114,7 @@
             "materialTypesMapFileName": "material_types_csv.tsv",
             "loanTypesMapFileName": "loan_types_csv.tsv",
             "itemStatusesMapFileName": "item_statuses.tsv",
-            "defaultHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+            "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
             "hridHandling": "default",
             "files": [
                 {
@@ -134,14 +134,15 @@
         {
             "name": "transform_mfhd_items",
             "migrationTaskType": "ItemsTransformer",
-            "hridHandling": "default",
             "defaultCallNumberTypeName": "Library of Congress classification",
             "itemsMappingFileName": "item_mapping_for_mfhd_attached_items.json",
             "locationMapFileName": "locations.tsv",
             "materialTypesMapFileName": "material_types.tsv",
             "loanTypesMapFileName": "loan_types.tsv",
+            "itemStatusesMapFileName": "item_statuses.tsv",
             "statisticalCodesMapFileName": "statcodes.tsv",
             "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
+            "hridHandling": "default",
             "files": [
                 {
                     "file_name": "items_linked_to_mfhds.csv"
@@ -165,6 +166,68 @@
             "useGroupMap": true,
             "userFile": {
                 "file_name": "staff.tsv"
+            }
+        },
+        {
+            "name": "transform_bw_holdings",
+            "holdingsTypeUuidForBoundwiths": "2286a2b5-168e-455e-b96b-4af124b0015c",
+            "migrationTaskType": "HoldingsCsvTransformer",
+            "holdingsMapFileName": "holdingsrecord_mapping_for_bw_items.json",
+            "locationMapFileName": "locations_bw.tsv",
+            "defaultCallNumberTypeName": "Library of Congress classification",
+            "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
+            "holdingsMergeCriteria": "clb",
+            "fallbackHoldingsTypeId": "fc637da4-0a92-4e84-8d58-e9770076d3ac",
+            "hridHandling": "default",
+            "files": [
+                {
+                    "file_name": "bw_items.tsv"
+                }
+            ]
+        },
+        {
+            "name": "post_bw_holdings",
+            "migrationTaskType": "BatchPoster",
+            "objectType": "Holdings",
+            "batchSize": 250,
+            "file": {
+                "file_name": "folio_holdings_test_run_transform_bw_holdings.json"
+            }
+        },
+        {
+            "name": "transform_bw_items",
+            "migrationTaskType": "ItemsTransformer",
+            "locationMapFileName": "locations_bw.tsv",
+            "itemsMappingFileName": "item_mapping_for_bw_items.json",
+            "defaultCallNumberTypeName": "Library of Congress classification",
+            "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
+            "materialTypesMapFileName": "material_types_bw.tsv",
+            "loanTypesMapFileName": "loan_types_bw.tsv",
+            "itemStatusesMapFileName": "item_statuses.tsv",
+            "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+            "hridHandling": "default",
+            "files": [
+                {
+                    "file_name": "bw_items.tsv"
+                }
+            ]
+        },
+        {
+            "name": "post_bw_items",
+            "migrationTaskType": "BatchPoster",
+            "objectType": "Items",
+            "batchSize": 250,
+            "file": {
+                "file_name": "folio_items_test_run_transform_bw_items.json"
+            }
+        },
+        {
+            "name": "post_extradata",
+            "migrationTaskType": "BatchPoster",
+            "objectType": "Extradata",
+            "batchSize": 250,
+            "file": {
+                "file_name": "extradata_test_run.extradata"
             }
         }
     ]

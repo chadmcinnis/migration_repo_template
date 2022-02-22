@@ -1,0 +1,6 @@
+LOCATION	folio_code
+infoOff	InfoOff
+jnlDesk	JnlDesk
+maps	maps,cd
+cd	maps,cd
+*	maps,cd
