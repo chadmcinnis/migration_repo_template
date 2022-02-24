@@ -86,12 +86,16 @@
             "locationMapFileName": "locations.tsv",
             "defaultCallNumberTypeName": "Library of Congress classification",
             "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
-            "holdingsMergeCriteria": "clb",
+            "holdingsMergeCriteria": [
+                "instanceId",
+                "permanentLocationId",
+                "callNumber"
+            ],
             "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
             "hridHandling": "default",
             "files": [
                 {
-                    "file_name": "items.tsv"
+                    "file_name": "csv_items.tsv"
                 }
             ]
         },
@@ -176,7 +180,11 @@
             "locationMapFileName": "locations_bw.tsv",
             "defaultCallNumberTypeName": "Library of Congress classification",
             "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
-            "holdingsMergeCriteria": "clb",
+            "holdingsMergeCriteria": [
+                "instanceId",
+                "permanentLocationId",
+                "callNumber"
+            ],
             "fallbackHoldingsTypeId": "fc637da4-0a92-4e84-8d58-e9770076d3ac",
             "hridHandling": "default",
             "files": [

@@ -188,20 +188,20 @@
       },
       {
          "folio_field": "notes[0].holdingsNoteTypeId",
-         "legacy_field": "FREETEXT",
-         "value": "",
+         "legacy_field": "holdings_note",
+         "value": "f453de0f-8b54-4e99-9180-52932529e3a6",
          "description": ""
       },
       {
          "folio_field": "notes[0].note",
-         "legacy_field": "FREETEXT",
+         "legacy_field": "holdings_note",
          "value": "",
          "description": ""
       },
       {
          "folio_field": "notes[0].staffOnly",
-         "legacy_field": "FREETEXT",
-         "value": "",
+         "legacy_field": "holdings_note",
+         "value": true,
          "description": ""
       },
       {
