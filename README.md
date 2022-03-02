@@ -3,7 +3,66 @@ This repo is a template repository for the files needed for migrating Inventory 
 
 TLDR; Create a new private repository based on this template. Clone it and then run create_folder_structure.sh 
 
-## Supported migration tasks
+- [Supported migration tasks](#supported-migration-tasks)
+- [FOLIO Inventory data migration process](#folio-inventory-data-migration-process)
+- [Mapping files](#mapping-files)
+  * [What file is needed for what objects?](#what-file-is-needed-for-what-objects-)
+  * [marc-instance-mapping-rules.json](#marc-instance-mapping-rulesjson)
+  * [mfhd_rules.json](#mfhd-rulesjson)
+  * [holdings_mapping.json](#holdings-mappingjson)
+  * [item_mapping.json](#item-mappingjson)
+    + [Fallback values in reference data mapping](#fallback-values-in-reference-data-mapping)
+  * [locations.tsv](#locationstsv)
+  * [material_types.tsv](#material-typestsv)
+  * [loan_types.tsv](#loan-typestsv)
+  * [call_number_type_mapping.tsv](#call-number-type-mappingtsv)
+  * [statcodes.tsv](#statcodestsv)
+  * [item_statuses.tsv](#item-statusestsv)
+  * [post_loan_migration_statuses.tsv](#post-loan-migration-statusestsv)
+- [Example Records](#example-records)
+  * [Result files](#result-files)
+  * [HRID handling](#hrid-handling)
+    + [Current implementation:](#current-implementation-)
+  * [Relevant FOLIO community documentation](#relevant-folio-community-documentation)
+- [Perform a test migration](#perform-a-test-migration)
+  * [Before you begin](#before-you-begin)
+  * [Transform bibs](#transform-bibs)
+    + [Configuration](#configuration)
+    + [Explanation of parameters](#explanation-of-parameters)
+    + [Syntax to run](#syntax-to-run)
+  * [Post tranformed Instances and SRS records](#post-tranformed-instances-and-srs-records)
+    + [Configuration](#configuration-1)
+    + [Explanation of parameters](#explanation-of-parameters-1)
+    + [Syntax to run](#syntax-to-run-1)
+  * [Transform MFHD records to holdings and SRS holdings](#transform-mfhd-records-to-holdings-and-srs-holdings)
+    + [Configuration](#configuration-2)
+    + [Explanation of parameters](#explanation-of-parameters-2)
+    + [Syntax to run](#syntax-to-run-2)
+  * [Post tranformed MFHDs and Holdingsrecords to FOLIO](#post-tranformed-mfhds-and-holdingsrecords-to-folio)
+    + [Configuration](#configuration-3)
+    + [Explanation of parameters](#explanation-of-parameters-3)
+    + [Syntax to run](#syntax-to-run-3)
+  * [Transform CSV/TSV files into Holdingsrecords](#transform-csv-tsv-files-into-holdingsrecords)
+    + [Configuration](#configuration-4)
+    + [Explanation of parameters](#explanation-of-parameters-4)
+    + [Syntax to run](#syntax-to-run-4)
+  * [Post trasformed Holdingsrecords to FOLIO](#post-trasformed-holdingsrecords-to-folio)
+  * [Transform CSV/TSV files into Items](#transform-csv-tsv-files-into-items)
+    + [Configuration](#configuration-5)
+    + [Explanation of parameters](#explanation-of-parameters-5)
+    + [Syntax to run](#syntax-to-run-5)
+  * [Post transformed Items to FOLIO](#post-transformed-items-to-folio)
+  * [Transform CSV/TSV files into FOLIO users](#transform-csv-tsv-files-into-folio-users)
+    + [Configuration](#configuration-6)
+    + [Explanation of parameters](#explanation-of-parameters-6)
+    + [Syntax to run](#syntax-to-run-6)
+  * [Post transformed users to FOLIO](#post-transformed-users-to-folio)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+
+# Supported migration tasks
 * Batch Poster (BatchPoster) - Post generated objects to FOLIO
 * Bibs Transformer (BibsTransformer) - Transform MARC21 Bib records to FOLIO Instances and SRS records
 * Holdings CSV Transformer (HoldingsCsvTransformer) - Creates FOLIO holdingsrecords from a TSV or CSV File
