@@ -255,7 +255,7 @@
       {
          "folio_field": "notes[0].staffOnly",
          "legacy_field": "Not mapped",
-         "value": false,
+         "value": "",
          "description": ""
       },
       {
