@@ -3,6 +3,14 @@ This repo is a template repository for the files needed for migrating Inventory 
 
 TLDR; Create a new private repository based on this template. Clone it and then run create_folder_structure.sh 
 
+## Supported migration tasks
+* Batch Poster (BatchPoster) - Post generated objects to FOLIO
+* Bibs Transformer (BibsTransformer) - Transform MARC21 Bib records to FOLIO Instances and SRS records
+* Holdings CSV Transformer (HoldingsCsvTransformer) - Creates FOLIO holdingsrecords from a TSV or CSV File
+* Holdings MARC transformer (HoldingsMarcTransformer) - Transforms MARC21 MFHD records into FOLIO Holdings and SRS records
+* Items Transformer (ItemsTransformer) - Creates FOLIO Items from a TSV or CSV File
+* User Transformer (UserTransformer) - Creates FOLIO Users from a TSV or CSV File
+
 # FOLIO Inventory data migration process
 This repository template plays a vital part in a process together with other repos allowing you to perform data migrations from a legacy ILS into FOLIO. 
 
@@ -179,27 +187,6 @@ marc_xml_dump.xml | A MARCXML dump of the bib records, with the proper 001:s and
 srs.json | FOLIO SRS records in json format. One per row in the file | To be loaded into FOLIO using the batch APIs
 
 
-## SRS record Loading
-In order for SRS record loading to run, you need a snapshot object in the FOLIO database. The snapshot ID (jobExecutionId) is hard coded into the SRS records by the transformation scripts. To do this, do the following:    
-Make a POST request to your FOLIO tenant to this endpoint:   
-```
-{{baseUrl}}/source-storage/snapshots
-```
-with the following payload:   
-```
-{ 
-
-    "jobExecutionId": "67dfac11-1caf-4470-9ad1-d533f6360bdd", 
-    "status": "PARSING_IN_PROGRESS", 
-    "processingStartedDate": "2020-12-30T14:33:50.478+0000", 
-    "metadata": { 
-        "createdDate": "2020-12-30T14:33:50.478+0000", 
-        "createdByUserId": "0280835d-b08d-4187-969d-9b4ecc247eae", 
-        "updatedDate": "2020-12-30T14:33:50.478+0000", 
-        "updatedByUserId": "0280835d-b08d-4187-969d-9b4ecc247eae" 
-    } 
-} 
-```
 
 ## HRID handling
 ### Current implementation:   
@@ -254,6 +241,19 @@ This configuration piece in the configuration file determines the behaviour
     ]
 }
 ```
+
+### Explanation of parameters
+| Parameter  | Possible values  | Explanation  | 
+| ------------- | ------------- | ------------- |
+| Name  | Any string  | The name of this task. Created files will have this as part of their names.  |
+| migrationTaskType  | Any of the [avialable migration tasks]()  | The type of migration task you want to run  |
+| useTenantMappingRules  | true  | Placeholder for option to use an external rules file  |
+| ilsFlavour  | any of "aleph", "voyager", "sierra", "millennium", "koha", "tag907y", "tag001", "tagf990a"  | Used to point scripts to the correct legacy identifier and other ILS-specific things  |
+| tags_to_delete  | any string  | Tags with these names will be deleted (after transformation) and not get stored in SRS  |
+| files  | Objects with filename and boolean  | Filename of the MARC21 file in the data/instances folder- Suppressed tells script to mark records as suppressedFromDiscovery  |
+
+
+
 ### Syntax to run
 ``` 
  pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json transform_bibs --base_folder PATH_TO_migration_repo_template/
@@ -282,6 +282,16 @@ These configuration pieces in the configuration file determines the behaviour
     }
 }
 ```
+
+### Explanation of parameters
+| Parameter  | Possible values  | Explanation  | 
+| ------------- | ------------- | ------------- |
+| Name  | Any string  | The name of this task. Created files will have this as part of their names.  |
+| migrationTaskType  | Any of the [avialable migration tasks]()  | The type of migration task you want to run  |
+| objectType  | Any of "Extradata", "Items", "Holdings", "Instances", "SRS", "Users" | Type of object to post  |
+| batchSize  | integer  | The number of records per batch to post. If the API does not allow batch posting, this number will be ignored  |
+| file.filename  | Any string  | Name of file to post, located in the results folder  |
+
 ### Syntax to run
 ``` 
  pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json post_bibs --base_folder PATH_TO_migration_repo_template/
@@ -300,7 +310,7 @@ This configuration piece in the configuration file determines the behaviour
     "mfhdMappingFileName": "mfhd_rules.json",
     "locationMapFileName": "locations.tsv",
     "defaultCallNumberTypeName": "Library of Congress classification",
-    "defaultHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+    "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
     "useTenantMappingRules": false,
     "hridHandling": "default",
     "createSourceRecords": true,
@@ -312,6 +322,20 @@ This configuration piece in the configuration file determines the behaviour
     ]
 }
 ```
+### Explanation of parameters
+| Parameter  | Possible values  | Explanation  | 
+| ------------- | ------------- | ------------- |
+| Name  | Any string  | The name of this task. Created files will have this as part of their names.  |
+| migrationTaskType  | Any of the [avialable migration tasks]()  | The type of migration task you want to run  |
+| mfhdMappingFileName  | Any string  | location of the MFHD rules in the mapping_files folder  |
+| locationMapFileName  | Any string   | Location of the Location mapping file in the mapping_files folder  |
+| defaultCallNumberTypeName  | Any call number name from FOLIO   | Used for fallback mapping for callnumbers  |
+| fallbackHoldingsTypeId  | A uuid  | Fallback holdings type if mapping does not work  |
+| useTenantMappingRules  | false | boolean (true/false) NOT YET IMPLEMENTED.  |
+| hridHandling  | "default" or "preserve001"  | If default, HRIDs will be generated according to the FOLIO settings. If preserve001, the 001s will be used as hrids if possible or fallback to default settings  |
+| createSourceRecords  | boolean (true/false)  |   |
+| files  | Objects with filename and boolean  | Filename of the MARC21 file in the data/instances folder- Suppressed tells script to mark records as suppressedFromDiscovery  |
+
 ### Syntax to run
 ``` 
 pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json transform_mfhd --base_folder PATH_TO_migration_repo_template/
@@ -340,6 +364,16 @@ These configuration pieces in the configuration file determines the behaviour
     }
 }
 ```
+
+### Explanation of parameters
+| Parameter  | Possible values  | Explanation  | 
+| ------------- | ------------- | ------------- |
+| Name  | Any string  | The name of this task. Created files will have this as part of their names.  |
+| migrationTaskType  | Any of the [avialable migration tasks]()  | The type of migration task you want to run  |
+| objectType  | Any of "Extradata", "Items", "Holdings", "Instances", "SRS", "Users" | Type of object to post  |
+| batchSize  | integer  | The number of records per batch to post. If the API does not allow batch posting, this number will be ignored  |
+| file.filename  | Any string  | Name of file to post, located in the results folder  |
+
 ### Syntax to run
 ``` 
 pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json post_holdingsrecords_from_mfhd --base_folder PATH_TO_migration_repo_template/
@@ -347,11 +381,127 @@ pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleC
 pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json post_srs_mfhds --base_folder PATH_TO_migration_repo_template/
 ```
 
-## Post tranformed Instances and SRS records 
+
+## Transform CSV/TSV files into Holdingsrecords
 ### Configuration
-This configuration piece in the configuration file determines the behaviour
+These configuration pieces in the configuration file determines the behaviour
 ```
+{
+    "name": "transform_csv_holdings",
+    "migrationTaskType": "HoldingsCsvTransformer",
+    "holdingsMapFileName": "holdingsrecord_mapping.json",
+    "locationMapFileName": "locations.tsv",
+    "defaultCallNumberTypeName": "Library of Congress classification",
+    "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
+    "previouslyGeneratedHoldingsFiles": [
+        "folio_holdings_test_run_transform_mfhd"
+    ],
+    "holdingsMergeCriteria": [
+        "instanceId",
+        "permanentLocationId",
+        "callNumber"
+    ],
+    "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
+    "files": [
+        {
+            "file_name": "csv_items.tsv"
+        }
+    ]
+}
 ```
+### Explanation of parameters
+| Parameter  | Possible values  | Explanation  | 
+| ------------- | ------------- | ------------- |
+| Name  | Any string  | The name of this task. Created files will have this as part of their names.  |
+| migrationTaskType  | Any of the [avialable migration tasks]()  | The type of migration task you want to run  |
+| holdingsMapFileName  | Any string  | location of the mapping file in the mapping_files folder  |
+| locationMapFileName  | Any string   | Location of the Location mapping file in the mapping_files folder  |
+| defaultCallNumberTypeName | any string | Name of callnumber in FOLIO used as a  fallback | 
+| callNumberTypeMapFileName  | Any string  | location of the mapping file in the mapping_files folder  |
+| previouslyGeneratedHoldingsFiles  |   |  |
+| holdingsMergeCriteria  | A list of strings with the names of [holdingsrecord](https://github.com/folio-org/mod-inventory-storage/blob/master/ramls/holdingsrecord.json) properties (on the same level) | Used to group indivitual rows into Holdings records. Proposed setting is ["instanceId", "permanentLocationId", "callNumber"] |
+|  fallbackHoldingsTypeId | uuid string  | The fallback/default holdingstype UUID |
+| createSourceRecords  | boolean (true/false)  |   |
+| files  | Objects with filename and boolean  | Filename of the MARC21 file in the data/instances folder- Suppressed tells script to mark records as suppressedFromDiscovery  |
+
 ### Syntax to run
 ``` 
+pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json transform_mfhd --base_folder PATH_TO_migration_repo_template/
 ```
+## Post trasformed Holdingsrecords to FOLIO
+See documentation for posting above
+
+## Transform CSV/TSV files into Items
+### Configuration
+These configuration pieces in the configuration file determines the behaviour
+```
+{
+    "name": "transform_csv_items",
+    "migrationTaskType": "ItemsTransformer",    
+    "itemsMappingFileName": "item_mapping_for_csv_items.json",
+    "locationMapFileName": "locations.tsv",
+    "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
+    "materialTypesMapFileName": "material_types_csv.tsv",
+    "loanTypesMapFileName": "loan_types_csv.tsv",
+    "itemStatusesMapFileName": "item_statuses.tsv",
+    "files": [
+        {
+            "file_name": "csv_items.tsv"
+        }
+    ]
+}
+```
+### Explanation of parameters
+| Parameter  | Possible values  | Explanation  | 
+| ------------- | ------------- | ------------- |
+| Name  | Any string  | The name of this task. Created files will have this as part of their names.  |
+| migrationTaskType  | Any of the [avialable migration tasks]()  | The type of migration task you want to run  |
+| itemsMappingFileName  | Any string  | location of the mapping file in the mapping_files folder  |
+| locationMapFileName  | Any string   | Location of the Location mapping file in the mapping_files folder  |
+| callNumberTypeMapFileName  | Any string   | location of the mapping file in the mapping_files folder  |
+| materialTypesMapFileName  | Any string   | location of the mapping file in the mapping_files folder  |
+| loanTypesMapFileName  | Any string   | location of the mapping file in the mapping_files folder  |
+| itemStatusesMapFileName  | Any string   | location of the mapping file in the mapping_files folder  |
+| files  | Objects with filename and boolean  | Filename of the MARC21 file in the data/instances folder- Suppressed tells script to mark records as suppressedFromDiscovery  |
+
+### Syntax to run
+``` 
+pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json transform_csv_items --base_folder PATH_TO_migration_repo_template/
+```
+
+## Post transformed Items to FOLIO
+See documentation for posting above
+
+## Transform CSV/TSV files into FOLIO users
+### Configuration
+These configuration pieces in the configuration file determines the behaviour
+```
+{
+    "name": "user_transform",
+    "migrationTaskType": "UserTransformer",
+    "groupMapPath": "user_groups.tsv",
+    "userMappingFileName": "user_mapping.json",
+    "useGroupMap": true,
+    "userFile": {
+        "file_name": "staff.tsv"
+    }
+}
+```
+### Explanation of parameters
+| Parameter  | Possible values  | Explanation  | 
+| ------------- | ------------- | ------------- |
+| Name  | Any string  | The name of this task. Created files will have this as part of their names.  |
+| migrationTaskType  | Any of the [avialable migration tasks]()  | The type of migration task you want to run  |
+| userMappingFileName  | Any string  | location of the mapping file in the mapping_files folder  |
+| groupMapPath  | Any string   | Location of the user group mapping file in the mapping_files folder  |
+| useGroupMap  | boolean   | Use the above group map file or use code-to-code direct mapping  |
+| userFile.file_name  | Any string  | name of csv/tsv file of legacy users in the data/users folder |
+
+
+### Syntax to run
+``` 
+pipenv run python main.py PATH_TO_migration_repo_template/mapping_files/exampleConfiguration.json user_transform --base_folder PATH_TO_migration_repo_template/
+```
+
+## Post transformed users to FOLIO
+See documentation for posting above
