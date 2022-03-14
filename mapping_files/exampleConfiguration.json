@@ -86,6 +86,9 @@
             "locationMapFileName": "locations.tsv",
             "defaultCallNumberTypeName": "Library of Congress classification",
             "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
+            "previouslyGeneratedHoldingsFiles": [
+                "folio_holdings_test_run_transform_mfhd.json"
+            ],
             "holdingsMergeCriteria": [
                 "instanceId",
                 "permanentLocationId",
