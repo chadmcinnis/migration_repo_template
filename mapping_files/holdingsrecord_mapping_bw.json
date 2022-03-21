@@ -32,7 +32,7 @@
       },
       {
          "folio_field": "legacyIdentifier",
-         "legacy_field": "RECORD #(ITEM)",
+         "legacy_field": "Z30_REC_KEY",
          "value": "",
          "description": ""
       },
@@ -62,7 +62,7 @@
       },
       {
          "folio_field": "discoverySuppress",
-         "legacy_field": "Not mapped",
+         "legacy_field": "SUPPRESS_IN_OPAC",
          "value": "",
          "description": ""
       },
@@ -98,13 +98,7 @@
       },
       {
          "folio_field": "formerIds[0]",
-         "legacy_field": "RECORD #(ITEM)",
-         "value": "",
-         "description": ""
-      },
-      {
-         "folio_field": "formerIds[1]",
-         "legacy_field": "RECORD #(BIBLIO)",
+         "legacy_field": "Z30_REC_KEY",
          "value": "",
          "description": ""
       },
@@ -188,26 +182,26 @@
       },
       {
          "folio_field": "instanceId",
-         "legacy_field": "RECORD #(BIBLIO)",
+         "legacy_field": "fake_instance_id",
          "value": "",
          "description": ""
       },
       {
          "folio_field": "notes[0].holdingsNoteTypeId",
-         "legacy_field": "VOLUME",
-         "value": "97fbb130-beb4-4eec-84a6-c69768ca3eea",
+         "legacy_field": "FREETEXT",
+         "value": "",
          "description": ""
       },
       {
          "folio_field": "notes[0].note",
-         "legacy_field": "VOLUME",
+         "legacy_field": "FREETEXT",
          "value": "",
          "description": ""
       },
       {
          "folio_field": "notes[0].staffOnly",
-         "legacy_field": "",
-         "value": "true",
+         "legacy_field": "FREETEXT",
+         "value": "",
          "description": ""
       },
       {
@@ -218,7 +212,7 @@
       },
       {
          "folio_field": "permanentLocationId",
-         "legacy_field": "LOCATION",
+         "legacy_field": "Z30_SUB_LIBRARY",
          "value": "",
          "description": ""
       },
@@ -278,7 +272,7 @@
       },
       {
          "folio_field": "temporaryLocationId",
-         "legacy_field": "Not mapped",
+         "legacy_field": "TEMP_LOCATION",
          "value": "",
          "description": ""
       }

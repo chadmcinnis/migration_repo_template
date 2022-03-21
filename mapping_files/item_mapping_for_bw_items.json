@@ -38,7 +38,7 @@
       },
       {
          "folio_field": "circulationNotes[0].note",
-         "legacy_field": "Not mapped",
+         "legacy_field": "SUPERVISOR(ITEM)",
          "value": "",
          "description": ""
       },

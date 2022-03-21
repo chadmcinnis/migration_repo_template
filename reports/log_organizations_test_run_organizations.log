@@ -1,0 +1,161 @@
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+148 fields in mapping file map
+23 Mapped fields in mapping file map
+Getting started!
+	orgs_example.tsv
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+148 fields in mapping file map
+23 Mapped fields in mapping file map
+Getting started!
+	orgs_example.tsv
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+148 fields in mapping file map
+23 Mapped fields in mapping file map
+Getting started!
+	orgs_example.tsv
+Wrapping up!
+Work done, wrapping up
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+148 fields in mapping file map
+23 Mapped fields in mapping file map
+Getting started!
+	orgs_example.tsv
+Wrapping up!
+Work done, wrapping up
+Logging set up
+Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Git ignore is set up correctly
+Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
+Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
+Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
+Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
+Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/organizations
+Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_organizations_test_run_organizations.log
+Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
+Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_organizations_test_run_organizations.tsv
+Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_organizations_test_run_organizations.json
+Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_organizations_test_run_organizations.md
+Files to process:
+	orgs_example.tsv
+146 fields in mapping file map
+19 Mapped fields in mapping file map
+Getting started!
+	orgs_example.tsv
+Wrapping up!
+Work done, wrapping up
