@@ -103,6 +103,42 @@
         {
             "folio_field": "username",
             "legacy_field": "USERNAME"
+        },
+        {
+            "folio_field": "notes[0].typeId",
+            "legacy_field": "",
+            "value": "e00f14d9-001e-4084-be04-961c0ed4b2a6",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[0].domain",
+            "legacy_field": "Not mapped",
+            "value": "users",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[0].title",
+            "legacy_field": "NOTE_TITLE",
+            "value": "",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[0].content",
+            "legacy_field": "NOTE_CONTENT",
+            "value": "",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[0].popUpOnCheckOut",
+            "legacy_field": "",
+            "value": true,
+            "description": ""
+        },
+        {
+            "folio_field": "notes[0].popUpOnUser",
+            "legacy_field": "",
+            "value": true,
+            "description": ""
         }
     ],
     "preferredContactTypeId": "Email",

@@ -25,7 +25,7 @@ Unique Holdings created from Items | 1
 Measure | Count   
 --- | ---:   
 Number of bib records referenced in item: 1 | 1   
-Number of bib records referenced in item: 2 | 10   
+Number of bib records referenced in item: 2 | 9   
 </details>   
    
 ## Location mapping    
@@ -36,17 +36,7 @@ Measure | Count
 --- | ---:   
 locations mapping - jnlDesk   -> JnlDesk | 6   
 locations mapping - jnlDesk -> JnlDesk | 2   
-locations mapping - maps   -> JnlDesk | 3   
-</details>   
-   
-## Default values added    
-The values below was added to all records from the value field in the mapping file instead of coming from the source records    
-<details><summary>Click to expand all 3 things</summary>     
-   
-Measure | Count   
---- | ---:   
-97fbb130-beb4-4eec-84a6-c69768ca3eea added to notes[0].holdingsNoteTypeId | 11   
-true added to notes[0].staffOnly | 11   
+locations mapping - maps   -> maps,cd | 2   
 </details>   
    
 ## Holdings Merging    
@@ -63,49 +53,47 @@ callNumber empty or not set | 1
 
 FOLIO Field | Mapped | Unmapped  
 --- | --- | ---:  
-_version | 0 (0%) | 11  
-acquisitionFormat | 0 (0%) | 11  
-acquisitionMethod | 0 (0%) | 11  
-administrativeNotes | 0 (0%) | 11  
-bareHoldingsItems | 0 (0%) | 11  
-callNumber | 0 (0%) | 11  
-callNumberPrefix | 0 (0%) | 11  
-callNumberSuffix | 0 (0%) | 11  
-callNumberTypeId | 0 (0%) | 11  
-copyNumber | 0 (0%) | 11  
-digitizationPolicy | 0 (0%) | 11  
-discoverySuppress | 0 (0%) | 11  
-effectiveLocationId | 0 (0%) | 11  
-electronicAccess | 0 (0%) | 11  
-holdingsInstance | 0 (0%) | 11  
-holdingsItems | 0 (0%) | 11  
-holdingsStatements | 0 (0%) | 11  
-holdingsStatementsForIndexes | 0 (0%) | 11  
-holdingsStatementsForSupplements | 0 (0%) | 11  
-holdingsTypeId | 11 (100%) | 0  
-hrid | 0 (0%) | 11  
-id | 11 (100%) | 0  
-illPolicy | 0 (0%) | 11  
-illPolicyId | 0 (0%) | 11  
-instanceId | 11 (100%) | 0  
-metadata.createdByUserId | 11 (100%) | 0  
-metadata.createdDate | 11 (100%) | 0  
-metadata.updatedByUserId | 11 (100%) | 0  
-metadata.updatedDate | 11 (100%) | 0  
-notes.holdingsNoteTypeId | 11 (100%) | 0  
-notes.note | 11 (100%) | 0  
-notes.staffOnly | 11 (100%) | 0  
-numberOfItems | 0 (0%) | 11  
-permanentLocation | 0 (0%) | 11  
-permanentLocationId | 11 (100%) | 0  
-receiptStatus | 0 (0%) | 11  
-receivingHistory | 0 (0%) | 11  
-retentionPolicy | 0 (0%) | 11  
-shelvingTitle | 0 (0%) | 11  
-sourceId | 0 (0%) | 11  
-statisticalCodeIds | 0 (0%) | 11  
-tags | 0 (0%) | 11  
-temporaryLocationId | 0 (0%) | 11  
+_version | 0 (0%) | 10  
+acquisitionFormat | 0 (0%) | 10  
+acquisitionMethod | 0 (0%) | 10  
+administrativeNotes | 0 (0%) | 10  
+bareHoldingsItems | 0 (0%) | 10  
+callNumber | 0 (0%) | 10  
+callNumberPrefix | 0 (0%) | 10  
+callNumberSuffix | 0 (0%) | 10  
+callNumberTypeId | 0 (0%) | 10  
+copyNumber | 0 (0%) | 10  
+digitizationPolicy | 0 (0%) | 10  
+discoverySuppress | 0 (0%) | 10  
+effectiveLocationId | 0 (0%) | 10  
+electronicAccess | 0 (0%) | 10  
+holdingsInstance | 0 (0%) | 10  
+holdingsItems | 0 (0%) | 10  
+holdingsStatements | 0 (0%) | 10  
+holdingsStatementsForIndexes | 0 (0%) | 10  
+holdingsStatementsForSupplements | 0 (0%) | 10  
+holdingsTypeId | 10 (100%) | 0  
+hrid | 0 (0%) | 10  
+id | 10 (100%) | 0  
+illPolicy | 0 (0%) | 10  
+illPolicyId | 0 (0%) | 10  
+instanceId | 10 (100%) | 0  
+metadata.createdByUserId | 10 (100%) | 0  
+metadata.createdDate | 10 (100%) | 0  
+metadata.updatedByUserId | 10 (100%) | 0  
+metadata.updatedDate | 10 (100%) | 0  
+notes | 0 (0%) | 10  
+numberOfItems | 0 (0%) | 10  
+permanentLocation | 0 (0%) | 10  
+permanentLocationId | 10 (100%) | 0  
+receiptStatus | 0 (0%) | 10  
+receivingHistory | 0 (0%) | 10  
+retentionPolicy | 0 (0%) | 10  
+shelvingTitle | 0 (0%) | 10  
+sourceId | 10 (100%) | 0  
+statisticalCodeIds | 0 (0%) | 10  
+tags | 0 (0%) | 10  
+temporaryLocationId | 0 (0%) | 10  
 </details>   
 
 ## Mapped Legacy fields
@@ -113,7 +101,7 @@ temporaryLocationId | 0 (0%) | 11
 
 Legacy Field | Present | Mapped | Unmapped  
 --- | --- | --- | ---:  
-LOCATION | 11 (100.0%) | 11 (100%) | 0  
-RECORD #(BIBLIO) | 22 (200.0%) | 22 (200%) | 0  
-RECORD #(ITEM) | 11 (100.0%) | 11 (100%) | 0  
+LOCATION | 10 (100.0%) | 10 (100%) | 0  
+RECORD #(BIBLIO) | 20 (200.0%) | 20 (200%) | 0  
+RECORD #(ITEM) | 10 (100.0%) | 10 (100%) | 0  
 </details>   

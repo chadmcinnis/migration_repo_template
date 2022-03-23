@@ -46,6 +46,7 @@
         },
         {
             "name": "transform_mfhd",
+            "legacyIdMarcPath": "001",
             "migrationTaskType": "HoldingsMarcTransformer",
             "mfhdMappingFileName": "mfhd_rules.json",
             "locationMapFileName": "locations.tsv",
@@ -239,6 +240,15 @@
             "batchSize": 250,
             "file": {
                 "file_name": "extradata_test_run.extradata"
+            }
+        },
+        {
+            "name": "post_users",
+            "migrationTaskType": "BatchPoster",
+            "objectType": "Users",
+            "batchSize": 250,
+            "file": {
+                "file_name": "folio_users_test_run_user_transform.json"
             }
         }
     ]

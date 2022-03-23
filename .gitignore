@@ -1,4 +1,5 @@
 results/
+reports/*.log
 archive/
 data/
 *.data

@@ -366,6 +366,7 @@ This configuration piece in the configuration file determines the behaviour
 {
     "name": "transform_mfhd",
     "migrationTaskType": "HoldingsMarcTransformer",
+    "legacyIdMarcPath": "001",
     "mfhdMappingFileName": "mfhd_rules.json",
     "locationMapFileName": "locations.tsv",
     "defaultCallNumberTypeName": "Library of Congress classification",
@@ -386,6 +387,7 @@ This configuration piece in the configuration file determines the behaviour
 | ------------- | ------------- | ------------- |
 | Name  | Any string  | The name of this task. Created files will have this as part of their names.  |
 | migrationTaskType  | Any of the [avialable migration tasks]()  | The type of migration task you want to run  |
+| legacyIdMarcPath  | A marc field followed by an optional subfield delimited by a $ | used to locate the legacy identifier for this record. Examles : "001", "951$c"  |
 | mfhdMappingFileName  | Any string  | location of the MFHD rules in the mapping_files folder  |
 | locationMapFileName  | Any string   | Location of the Location mapping file in the mapping_files folder  |
 | defaultCallNumberTypeName  | Any call number name from FOLIO   | Used for fallback mapping for callnumbers  |
