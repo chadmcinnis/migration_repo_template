@@ -107,7 +107,7 @@
         {
             "folio_field": "notes[0].typeId",
             "legacy_field": "",
-            "value": "e00f14d9-001e-4084-be04-961c0ed4b2a6",
+            "value": "c08780d2-71ca-4215-b997-be6e69fc4f2b",
             "description": ""
         },
         {
@@ -139,6 +139,78 @@
             "legacy_field": "",
             "value": true,
             "description": ""
+        },
+        {
+            "folio_field": "notes[1].typeId",
+            "legacy_field": "",
+            "value": "c08780d2-71ca-4215-b997-be6e69fc4f2b",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[1].domain",
+            "legacy_field": "Not mapped",
+            "value": "users",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[1].title",
+            "legacy_field": "some_other_note_title",
+            "value": "",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[1].content",
+            "legacy_field": "some_other_note",
+            "value": "",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[1].popUpOnCheckOut",
+            "legacy_field": "",
+            "value": true,
+            "description": ""
+        },
+        {
+            "folio_field": "notes[1].popUpOnUser",
+            "legacy_field": "",
+            "value": true,
+            "description": ""
+        },
+        {
+            "folio_field": "notes[2].typeId",
+            "legacy_field": "",
+            "value": "c08780d2-71ca-4215-b997-be6e69fc4f2b",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[2].domain",
+            "legacy_field": "Not mapped",
+            "value": "users",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[2].title",
+            "legacy_field": "third_note_title",
+            "value": "",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[2].content",
+            "legacy_field": "third_note_content",
+            "value": "",
+            "description": ""
+        },
+        {
+            "folio_field": "notes[2].popUpOnCheckOut",
+            "legacy_field": "",
+            "value": true,
+            "description": ""
+        },
+        {
+            "folio_field": "notes[2].popUpOnUser",
+            "legacy_field": "",
+            "value": true,
+            "description": ""
         }
     ],
     "preferredContactTypeId": "Email",
@@ -146,6 +218,5 @@
         "Home Address",
         "School/Temp Address"
     ],
-    "emailToUseWhileTesting": "morganm@gvsu.edu",
     "primaryAddressIndex": 0
 }
