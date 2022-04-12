@@ -275,6 +275,30 @@
                 }
             ],
             "utcDifference": -6
+        },
+        {
+            "name": "migrate_open_requests",
+            "migrationTaskType": "RequestsMigrator",
+            "openRequestsFile": {
+                "file_name": "open_requests.tsv"
+            },
+            "item_files": [
+                {
+                    "file_name": "folio_items_test_run_transform_csv_items.json"
+                },
+                {
+                    "file_name": "folio_items_test_run_transform_bw_items.json"
+                },
+                {
+                    "file_name": "folio_items_test_run_transform_mfhd_items.json"
+                }
+            ],
+            "patron_files": [
+                {
+                    "file_name": "folio_users_test_run_user_transform.json"
+                }
+            ],
+            "utcDifference": -6
         }
     ]
 }
