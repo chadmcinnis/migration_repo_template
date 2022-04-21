@@ -145,6 +145,12 @@
          "description": ""
       },
       {
+         "folio_field": "enumeration",
+         "legacy_field": "Z30_ENUMERATION_B",
+         "value": "",
+         "description": ""
+      },
+      {
          "folio_field": "formerIds[0]",
          "legacy_field": "fake_instance_id",
          "value": "",
