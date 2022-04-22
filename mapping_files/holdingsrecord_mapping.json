@@ -62,7 +62,7 @@
       },
       {
          "folio_field": "discoverySuppress",
-         "legacy_field": "SUPPRESS_IN_OPAC",
+         "legacy_field": "Not mapped",
          "value": "",
          "description": ""
       },
@@ -272,7 +272,7 @@
       },
       {
          "folio_field": "temporaryLocationId",
-         "legacy_field": "TEMP_LOCATION",
+         "legacy_field": "Not mapped",
          "value": "",
          "description": ""
       }

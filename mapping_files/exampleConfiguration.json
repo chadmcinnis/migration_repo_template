@@ -109,9 +109,11 @@
             "migrationTaskType": "BatchPoster",
             "objectType": "Holdings",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_holdings_test_run_transform_csv_holdings.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_holdings_test_run_transform_csv_holdings.json"
+                }
+            ]
         },
         {
             "name": "transform_csv_items",
@@ -136,9 +138,11 @@
             "migrationTaskType": "BatchPoster",
             "objectType": "Items",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_items_test_run_transform_csv_items.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_items_test_run_transform_csv_items.json"
+                }
+            ]
         },
         {
             "name": "transform_mfhd_items",
@@ -163,9 +167,11 @@
             "migrationTaskType": "BatchPoster",
             "objectType": "Items",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_items_test_run_transform_mfhd_items.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_items_test_run_transform_mfhd_items.json"
+                }
+            ]
         },
         {
             "name": "user_transform",
@@ -203,9 +209,11 @@
             "migrationTaskType": "BatchPoster",
             "objectType": "Holdings",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_holdings_test_run_transform_bw_holdings.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_holdings_test_run_transform_bw_holdings.json"
+                }
+            ]
         },
         {
             "name": "transform_bw_items",
@@ -239,18 +247,28 @@
             "migrationTaskType": "BatchPoster",
             "objectType": "Extradata",
             "batchSize": 250,
-            "file": {
-                "file_name": "extradata_test_run.extradata"
-            }
+            "files": [
+                {
+                    "file_name": "extradata_test_run_user_transform.extradata"
+                },
+                {
+                    "file_name": "extradata_test_run_transform_bw_items.extradata"
+                },
+                {
+                    "file_name": "extradata_test_run_transform_bw_holdings.extradata"
+                }
+            ]
         },
         {
             "name": "post_users",
             "migrationTaskType": "BatchPoster",
             "objectType": "Users",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_users_test_run_user_transform.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_users_test_run_user_transform.json"
+                }
+            ]
         },
         {
             "name": "migrate_open_loans",
