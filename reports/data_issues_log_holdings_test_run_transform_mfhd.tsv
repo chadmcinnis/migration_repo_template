@@ -1,2 +1,0 @@
-RECORD FAILED	1	legacy_id was empty	001
-RECORD FAILED	[<bound method Field.value of <pymarc.field.Field object at 0x7fc0c4748130>>]	No Instance id mapped. 	['000000167', '7611780']

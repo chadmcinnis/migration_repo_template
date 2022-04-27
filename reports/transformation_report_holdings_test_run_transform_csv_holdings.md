@@ -39,8 +39,8 @@ These are the results for the mapping between legacy locations and your new FOLI
    
 Measure | Count   
 --- | ---:   
-locations mapping - Unmapped (Default value was set) -- MAIN - ACDPM -> maps,cd | 1   
-locations mapping - Unmapped (Default value was set) -- REN - ACDPM -> maps,cd | 1   
+Unmapped (Default value was set) -- MAIN - ACDPM -> maps,cd | 1   
+Unmapped (Default value was set) -- REN - ACDPM -> maps,cd | 1   
 </details>   
    
 ## Default values added    

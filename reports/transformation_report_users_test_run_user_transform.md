@@ -2,12 +2,11 @@
    
 ## User group mapping    
     
-<details><summary>Click to expand all 3 things</summary>     
+<details><summary>Click to expand all 2 things</summary>     
    
 Measure | Count   
 --- | ---:   
-STAF -> Staff | 2   
-usergroups mapping - STAF -> Staff | 2   
+STAF -> Staff | 1   
 </details>   
    
 ## Mapped note types    
@@ -16,15 +15,16 @@ Library action: **REVIEW** <br/>The created FOLIO instances contain the followin
    
 Measure | Count   
 --- | ---:   
-e00f14d9-001e-4084-be04-961c0ed4b2a6 | 1   
+c08780d2-71ca-4215-b997-be6e69fc4f2b | 2   
 </details>   
    
 ## General statistics    
 A list of general counterts to outline the transformation as a whole.    
-<details><summary>Click to expand all 2 things</summary>     
+<details><summary>Click to expand all 3 things</summary>     
    
 Measure | Count   
 --- | ---:   
+Notes without content that were discarded. Set some default value if you only intend to set the note title | 1   
 Successful user transformations | 1   
 </details>   
 
@@ -81,4 +81,8 @@ PATRONID | 1 (100.0%) | 1 (100%) | 0
 PHONE | 1 (100.0%) | 1 (100%) | 0  
 TYPE | 1 (100.0%) | 1 (100%) | 0  
 USERNAME | 1 (100.0%) | 1 (100%) | 0  
+some_other_note | 1 (100.0%) | 1 (100%) | 0  
+some_other_note_title | 1 (100.0%) | 1 (100%) | 0  
+third_note_content | 1 (100.0%) | 0 (0%) | 1  
+third_note_title | 1 (100.0%) | 1 (100%) | 0  
 </details>   

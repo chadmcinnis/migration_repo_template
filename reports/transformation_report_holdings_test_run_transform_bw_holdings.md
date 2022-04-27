@@ -7,14 +7,14 @@ A list of general counterts to outline the transformation as a whole.
 Measure | Count   
 --- | ---:   
 BW Items found tied to previously created BW Holdings | 2   
-Bib ids referenced in bound-with items | 20   
-Bound-with holdings created | 20   
-Bound-with items identified by bib id | 10   
-Holdings Records Written to disk | 19   
-Number of Legacy items in file | 11   
+Bib ids referenced in bound-with items | 18   
+Bound-with holdings created | 18   
+Bound-with items identified by bib id | 9   
+Holdings Records Written to disk | 17   
+Number of Legacy items in file | 10   
 Number of files processed | 1   
-Records matched to Instances | 21   
-Unique BW Holdings created from Items | 18   
+Records matched to Instances | 19   
+Unique BW Holdings created from Items | 16   
 Unique Holdings created from Items | 1   
 </details>   
    
@@ -34,9 +34,19 @@ These are the results for the mapping between legacy locations and your new FOLI
    
 Measure | Count   
 --- | ---:   
-locations mapping - jnlDesk   -> JnlDesk | 6   
-locations mapping - jnlDesk -> JnlDesk | 2   
-locations mapping - maps   -> maps,cd | 2   
+jnlDesk   -> JnlDesk | 6   
+jnlDesk -> JnlDesk | 2   
+maps   -> JnlDesk | 2   
+</details>   
+   
+## Default values added    
+The values below was added to all records from the value field in the mapping file instead of coming from the source records    
+<details><summary>Click to expand all 3 things</summary>     
+   
+Measure | Count   
+--- | ---:   
+97fbb130-beb4-4eec-84a6-c69768ca3eea added to notes[0].holdingsNoteTypeId | 10   
+true added to notes[0].staffOnly | 10   
 </details>   
    
 ## Holdings Merging    
@@ -82,7 +92,9 @@ metadata.createdByUserId | 10 (100%) | 0
 metadata.createdDate | 10 (100%) | 0  
 metadata.updatedByUserId | 10 (100%) | 0  
 metadata.updatedDate | 10 (100%) | 0  
-notes | 0 (0%) | 10  
+notes.holdingsNoteTypeId | 10 (100%) | 0  
+notes.note | 10 (100%) | 0  
+notes.staffOnly | 10 (100%) | 0  
 numberOfItems | 0 (0%) | 10  
 permanentLocation | 0 (0%) | 10  
 permanentLocationId | 10 (100%) | 0  

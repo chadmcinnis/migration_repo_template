@@ -1,16 +1,17 @@
 Logging set up
-Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
+Mapping files folder is mapping_files
 Git ignore is set up correctly
-Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
-Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
-Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
-Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
-Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/instances
-Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_instances_test_run_transform_bibs.log
-Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
-Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_instances_test_run_transform_bibs.tsv
-Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_instances_test_run_transform_bibs.json
-Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_instances_test_run_transform_bibs.md
+Base folder is .
+Reports and logs folder is reports
+Results folder is results
+Data folder is data
+Source records files folder is data/instances
+Log file will be located at reports/log_instances_test_run_transform_bibs.log
+Extra data will be stored atresults/extradata_test_run_transform_bibs.extradata
+Data issue reports reports/data_issues_log_instances_test_run_transform_bibs.tsv
+Created objects will be stored at  results/folio_instances_test_run_transform_bibs.json
+Migration report file will be saved at reports/transformation_report_instances_test_run_transform_bibs.md
+MigrationTaskBase init done
 {
     "name": "transform_bibs",
     "deactivate035_from001": false,
@@ -36,26 +37,22 @@ Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo
 25	class_types
 50 	statistical_codes
 Setting up reference data for bib transformation
-3	contrib_name_types
-276	contributor_types
+6	contrib_name_types
+279	contributor_types
 18	alt_title_types
 41	identifier_types
 Setting defaults
-Contributor name type:	35b01201-597f-4938-a0d1-110245ba9d67
+Contributor name type:	2b4007a7-2d96-4262-a360-c9f760e355c3
 Contributor type:	452c8fa8-84ed-4d4b-9427-8ea375be2f25
 MapperBase initiating
 Fetched HRID settings.
-Instance HRID prefix is jiinst
-Instance start number is 7000186
-Holdings HRID prefix is jiinst
-Holdings start number is 2000052
+Instance HRID prefix is jiinstt
+Instance start number is 7000509
+Holdings HRID prefix is jiinstt
+Holdings start number is 2000099
 Fetching HoldingsRecord schema...
-Latest tag of mod-inventory-storage is v23.0.0
-https://raw.githubusercontent.com/folio-org/mod-inventory-storage/v23.0.0/ramls/holdingsrecord.json
 done
 Fetching Instance schema...
-Latest tag of mod-inventory-storage is v23.0.0
-https://raw.githubusercontent.com/folio-org/mod-inventory-storage/v23.0.0/ramls/instance.json
 done
 fetching current user..
 Current user id is 9eb67301-6f6e-468f-9b1a-6134dc39a684
@@ -65,7 +62,7 @@ Fetching valid language codes...
 Init done
 Starting....
 running bibs.mrc
-Done reading 14 records from file
+Done reading 12 records from file
 Done. Wrapping up...
 Mapper wrapping up
 Setting HRID counter to current +1
@@ -73,102 +70,12 @@ Setting HRID counter to current +1
 Current hrid settings: {
     "id": "4fcc9bde-631c-46e3-bb3f-385ff14ddcc4",
     "instances": {
-        "prefix": "jiinst",
-        "startNumber": 7000201
+        "prefix": "jiinstt",
+        "startNumber": 7000522
     },
     "holdings": {
-        "prefix": "kihold",
-        "startNumber": 2000053
-    },
-    "items": {
-        "prefix": "kiitem",
-        "startNumber": 35000017
-    },
-    "commonRetainLeadingZeroes": false
-}
-Done. Transformation report written to transformation_report_instances_test_run_transform_bibs.md
-Work done, wrapping up
-Logging set up
-Mapping files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/mapping_files
-Git ignore is set up correctly
-Base folder is /mnt/c/Users/LSjogren/code/migration_repo_template
-Reports and logs folder is /mnt/c/Users/LSjogren/code/migration_repo_template/reports
-Results folder is /mnt/c/Users/LSjogren/code/migration_repo_template/results
-Data folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data
-Source records files folder is /mnt/c/Users/LSjogren/code/migration_repo_template/data/instances
-Log file will be located at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/log_instances_test_run_transform_bibs.log
-Extra data will be stored at/mnt/c/Users/LSjogren/code/migration_repo_template/results/extradata_test_run.extradata
-Data issue reports /mnt/c/Users/LSjogren/code/migration_repo_template/reports/data_issues_log_instances_test_run_transform_bibs.tsv
-Created objects will be stored at  /mnt/c/Users/LSjogren/code/migration_repo_template/results/folio_instances_test_run_transform_bibs.json
-Migration report file will be saved at /mnt/c/Users/LSjogren/code/migration_repo_template/reports/transformation_report_instances_test_run_transform_bibs.md
-{
-    "name": "transform_bibs",
-    "deactivate035_from001": false,
-    "migration_task_type": "BibsTransformer",
-    "use_tenant_mapping_rules": true,
-    "hrid_handling": "default",
-    "files": [
-        {
-            "file_name": "bibs.mrc",
-            "suppressed": false
-        }
-    ],
-    "ils_flavour": "tag001",
-    "tags_to_delete": [
-        "841",
-        "852"
-    ]
-}
-[FileDefinition(file_name='bibs.mrc', suppressed=False)]
-# of files to process: 1
-	file_name='bibs.mrc' suppressed=False
-6	electronic_access_relationships
-25	class_types
-50 	statistical_codes
-Setting up reference data for bib transformation
-3	contrib_name_types
-276	contributor_types
-18	alt_title_types
-41	identifier_types
-Setting defaults
-Contributor name type:	35b01201-597f-4938-a0d1-110245ba9d67
-Contributor type:	452c8fa8-84ed-4d4b-9427-8ea375be2f25
-MapperBase initiating
-Fetched HRID settings.
-Instance HRID prefix is jiinst
-Instance start number is 7000201
-Holdings HRID prefix is jiinst
-Holdings start number is 2000053
-Fetching HoldingsRecord schema...
-Latest tag of mod-inventory-storage is v23.0.0
-https://raw.githubusercontent.com/folio-org/mod-inventory-storage/v23.0.0/ramls/holdingsrecord.json
-done
-Fetching Instance schema...
-Latest tag of mod-inventory-storage is v23.0.0
-https://raw.githubusercontent.com/folio-org/mod-inventory-storage/v23.0.0/ramls/instance.json
-done
-fetching current user..
-Current user id is 9eb67301-6f6e-468f-9b1a-6134dc39a684
-HRID handling is set to: 'default'
-Fetching mapping rules from the tenant
-Fetching valid language codes...
-Init done
-Starting....
-running bibs.mrc
-Done reading 14 records from file
-Done. Wrapping up...
-Mapper wrapping up
-Setting HRID counter to current +1
-204 Successfully set HRID settings.
-Current hrid settings: {
-    "id": "4fcc9bde-631c-46e3-bb3f-385ff14ddcc4",
-    "instances": {
-        "prefix": "jiinst",
-        "startNumber": 7000216
-    },
-    "holdings": {
-        "prefix": "coolkihold",
-        "startNumber": 2000054
+        "prefix": "01-",
+        "startNumber": 2000100
     },
     "items": {
         "prefix": "coolkiitem",

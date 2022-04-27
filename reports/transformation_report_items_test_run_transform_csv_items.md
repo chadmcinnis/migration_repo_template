@@ -12,6 +12,15 @@ Number of legacy items in total | 2
 Number of records written to disk | 2   
 </details>   
    
+## Details    
+    
+<details><summary>Click to expand all 2 things</summary>     
+   
+Measure | Count   
+--- | ---:   
+{'Z30_ENUMERATION_A', 'Z30_ENUMERATION_B'} were concatenated | 2   
+</details>   
+   
 ## Default values added    
 The values below was added to all records from the value field in the mapping file instead of coming from the source records    
 <details><summary>Click to expand all 3 things</summary>     
@@ -37,7 +46,7 @@ Measure | Count
    
 Measure | Count   
 --- | ---:   
-mtypes mapping - BOOK -> sound recording | 2   
+BOOK -> sound recording | 2   
 </details>   
    
 ## Permanent Loan type mapping    
@@ -46,7 +55,7 @@ mtypes mapping - BOOK -> sound recording | 2
    
 Measure | Count   
 --- | ---:   
-loantypes mapping - BOOK -> MSU Hold Only | 2   
+BOOK -> MSU Hold Only | 2   
 </details>   
 
 ## Mapped FOLIO fields
@@ -67,7 +76,7 @@ effectiveCallNumberComponents | 0 (0%) | 2
 effectiveLocationId | 0 (0%) | 2  
 effectiveShelvingOrder | 0 (0%) | 2  
 electronicAccess | 0 (0%) | 2  
-enumeration | 0 (0%) | 2  
+enumeration | 2 (100%) | 0  
 holdingsRecord2 | 0 (0%) | 2  
 holdingsRecordId | 2 (100%) | 0  
 hrid | 2 (100%) | 0  
@@ -113,6 +122,7 @@ yearCaption | 0 (0%) | 2
 Legacy Field | Present | Mapped | Unmapped  
 --- | --- | --- | ---:  
 Z30_BARCODE | 2 (100.0%) | 2 (100%) | 0  
+Z30_ENUMERATION_A | 2 (100.0%) | 2 (100%) | 0  
 Z30_MATERIAL | 4 (200.0%) | 4 (200%) | 0  
 Z30_REC_KEY | 2 (100.0%) | 2 (100%) | 0  
 fake_instance_id | 6 (300.0%) | 6 (300%) | 0  

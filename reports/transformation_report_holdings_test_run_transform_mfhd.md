@@ -1,5 +1,5 @@
 # MFHD records transformation results   
-Time Finished: 2022-03-21T11:16:01.094884   
+Time Finished: 2022-04-26T10:49:21.240429   
 <br/>Data errors preventing records from being migrated are marked **FIX BEFORE MIGRATION**. The library is advised to clean up these errors in the source data.<br/><br/> The sections related to field counts and mapping results are marked **REVIEW**. These do not indicate errors preventing records from being migrated, but may point to data anomalies or in the mappings. The library should review these to make sure that the numbers are what one would expect, knowing the source data. Is this the expected number of serials? Is this the expected number of cartographic materials?
    
 ## Record status (leader pos 5)    
@@ -68,6 +68,15 @@ Measure | Count
 Measure | Count   
 --- | ---:   
 x -> Monograph -> Monograph (03c9c400-b9e3-4a07-ac0e-05ab470233ed | 4   
+</details>   
+   
+## MARC21 validation issues found in records    
+    
+<details><summary>Click to expand all 2 things</summary>     
+   
+Measure | Count   
+--- | ---:   
+008 lenght invalid. 'xxxxxxxx' was stripped out | 1   
 </details>   
 
 ## Mapped FOLIO fields
