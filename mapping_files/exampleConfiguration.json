@@ -31,18 +31,22 @@
             "migrationTaskType": "BatchPoster",
             "objectType": "Instances",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_instances_test_run_transform_bibs.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_instances_test_run_transform_bibs.json"
+                }
+            ]
         },
         {
             "name": "post_srs_bibs",
             "migrationTaskType": "BatchPoster",
             "objectType": "SRS",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_srs_instances_test_run_transform_bibs.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_srs_instances_test_run_transform_bibs.json"
+                }
+            ]
         },
         {
             "name": "transform_mfhd",
@@ -67,18 +71,33 @@
             "migrationTaskType": "BatchPoster",
             "objectType": "Holdings",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_holdings_test_run_transform_mfhd.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_holdings_test_run_transform_mfhd.json"
+                }
+            ]
+        },
+        {
+            "name": "post_holdings",
+            "migrationTaskType": "BatchPoster",
+            "objectType": "Holdings",
+            "batchSize": 250,
+            "files": [
+                {
+                    "file_name": "folio_holdings_test_run_transform_mfhd.json"
+                }
+            ]
         },
         {
             "name": "post_srs_mfhds",
             "migrationTaskType": "BatchPoster",
             "objectType": "SRS",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_srs_holdings_test_run_transform_mfhd.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_srs_holdings_test_run_transform_mfhd.json"
+                }
+            ]
         },
         {
             "name": "transform_csv_holdings",
@@ -238,9 +257,11 @@
             "migrationTaskType": "BatchPoster",
             "objectType": "Items",
             "batchSize": 250,
-            "file": {
-                "file_name": "folio_items_test_run_transform_bw_items.json"
-            }
+            "files": [
+                {
+                    "file_name": "folio_items_test_run_transform_bw_items.json"
+                }
+            ]
         },
         {
             "name": "post_extradata",
