@@ -2,111 +2,165 @@
     "data": [
         {
             "folio_field": "barcode",
-            "legacy_field": "BARCODE"
+            "legacy_field": "BARCODE",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "customFields",
-            "legacy_field": ""
+            "legacy_field": "",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "departments[0]",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "enrollmentDate",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "expirationDate",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "externalSystemId",
-            "legacy_field": "USERNAME"
+            "legacy_field": "USERNAME",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "legacyIdentifier",
-            "legacy_field": "PATRONID"
+            "legacy_field": "PATRONID",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "patronGroup",
-            "legacy_field": "TYPE"
+            "legacy_field": "TYPE",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].addressLine1",
-            "legacy_field": "HOMEADDRESS1"
+            "legacy_field": "HOMEADDRESS1",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].addressLine2",
-            "legacy_field": "HOMEADDRESS2"
+            "legacy_field": "HOMEADDRESS2",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].addressLine2",
-            "legacy_field": "HOMEADDRESS3"
+            "legacy_field": "HOMEADDRESS3",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].addressTypeId",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].city",
-            "legacy_field": "HOMECITY"
+            "legacy_field": "HOMECITY",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].countryId",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].postalCode",
-            "legacy_field": "HOMEZIP"
+            "legacy_field": "HOMEZIP",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].primaryAddress",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.addresses[0].region",
-            "legacy_field": "HOMESTATE"
+            "legacy_field": "HOMESTATE",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.dateOfBirth",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.email",
-            "legacy_field": "EMAIL"
+            "legacy_field": "EMAIL",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.firstName",
-            "legacy_field": "FIRSTNAME"
+            "legacy_field": "FIRSTNAME",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.lastName",
-            "legacy_field": "LASTNAME"
+            "legacy_field": "LASTNAME",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.middleName",
-            "legacy_field": "MIDDLE"
+            "legacy_field": "MIDDLE",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.mobilePhone",
-            "legacy_field": "MOBILEPHONE"
+            "legacy_field": "MOBILEPHONE",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.phone",
-            "legacy_field": "PHONE"
+            "legacy_field": "PHONE",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.preferredContactTypeId",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "personal.preferredFirstName",
-            "legacy_field": "Not mapped"
+            "legacy_field": "Not mapped",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "username",
-            "legacy_field": "USERNAME"
+            "legacy_field": "USERNAME",
+            "value": "",
+            "description": ""
         },
         {
             "folio_field": "notes[0].typeId",
@@ -216,11 +270,5 @@
             "value": true,
             "description": ""
         }
-    ],
-    "preferredContactTypeId": "Email",
-    "addressTypes": [
-        "Home Address",
-        "School/Temp Address"
-    ],
-    "primaryAddressIndex": 0
+    ]
 }
