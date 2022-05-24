@@ -41,6 +41,10 @@
             "legacy_field": "HOMEADDRESS2"
         },
         {
+            "folio_field": "personal.addresses[0].addressLine2",
+            "legacy_field": "HOMEADDRESS3"
+        },
+        {
             "folio_field": "personal.addresses[0].addressTypeId",
             "legacy_field": "Not mapped"
         },
