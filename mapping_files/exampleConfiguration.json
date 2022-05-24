@@ -1,11 +1,12 @@
 {
     "libraryInformation": {
         "tenantId": "fs09000000",
-        "okapiUrl": "https://okapi-bugfest-kiwi.folio.ebsco.com",
+        "multiFieldDelimiter": "<^>",
+        "okapiUrl": "https://okapi-bugfest-lotus.int.aws.folio.org",
         "okapiUsername": "folio",
         "libraryName": "FOLIO Reference env",
         "logLevelDebug": false,
-        "folioRelease": "kiwi",
+        "folioRelease": "lotus",
         "addTimeStampToFileNames": false,
         "iterationIdentifier": "test_run"
     },
@@ -23,6 +24,11 @@
                 {
                     "file_name": "bibs.mrc",
                     "suppressed": false
+                },
+                {
+                    "file_name": "staff_suppressed_bibs.mrc",
+                    "suppressed": false,
+                    "staffSuppress": true
                 }
             ]
         },
@@ -68,17 +74,6 @@
         },
         {
             "name": "post_holdingsrecords_from_mfhd",
-            "migrationTaskType": "BatchPoster",
-            "objectType": "Holdings",
-            "batchSize": 250,
-            "files": [
-                {
-                    "file_name": "folio_holdings_test_run_transform_mfhd.json"
-                }
-            ]
-        },
-        {
-            "name": "post_holdings",
             "migrationTaskType": "BatchPoster",
             "objectType": "Holdings",
             "batchSize": 250,
@@ -298,6 +293,7 @@
             "openLoansFile": {
                 "file_name": "loans.tsv"
             },
+            "startingRow": 1,
             "item_files": [
                 {
                     "file_name": "folio_items_test_run_transform_csv_items.json"
@@ -339,6 +335,26 @@
                 }
             ],
             "utcDifference": -6
+        },
+        {
+            "name": "migrate_courses",
+            "migrationTaskType": "CoursesMigrator",
+            "compositeCourseMapPath": "course_mapping.json",
+            "coursesFile": {
+                "fileName": "legacy_courses.tsv"
+            },
+            "termsMapPath": "terms_map.tsv"
+        },
+        {
+            "name": "post_courses",
+            "migrationTaskType": "BatchPoster",
+            "objectType": "Extradata",
+            "batchSize": 1,
+            "files": [
+                {
+                    "file_name": "extradata_test_run_migrate_courses.extradata"
+                }
+            ]
         }
     ]
 }
