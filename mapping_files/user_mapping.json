@@ -93,7 +93,7 @@
         {
             "folio_field": "personal.addresses[0].primaryAddress",
             "legacy_field": "Not mapped",
-            "value": "",
+            "value": true,
             "description": ""
         },
         {
