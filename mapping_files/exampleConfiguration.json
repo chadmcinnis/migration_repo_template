@@ -26,7 +26,7 @@
                     "suppressed": false
                 },
                 {
-                    "file_name": "staff_suppressed_bibs.mrc",
+                    "file_name": "bws.mrc",
                     "suppressed": false,
                     "staffSuppress": true
                 }
@@ -365,6 +365,14 @@
                     "file_name": "orgs_example.tsv"
                 }
             ]
+        },
+        {
+            "name": "migrate_reserves",
+            "migrationTaskType": "ReservesMigrator",
+            "locationMapPath": "reserve_locations.tsv",
+            "courseReserveFilePath": {
+                "fileName": "folio_course_reserve_item_barcode.tsv"
+            }
         }
     ]
 }
