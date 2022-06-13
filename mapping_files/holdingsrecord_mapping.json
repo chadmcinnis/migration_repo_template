@@ -116,7 +116,7 @@
       },
       {
          "folio_field": "holdingsStatements[0].statement",
-         "legacy_field": "Not mapped",
+         "legacy_field": "holdings_stmt",
          "value": "",
          "description": ""
       },
