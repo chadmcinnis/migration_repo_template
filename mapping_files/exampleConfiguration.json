@@ -355,6 +355,16 @@
                     "file_name": "extradata_test_run_migrate_courses.extradata"
                 }
             ]
+        },
+        {
+            "name": "organization_transformer",
+            "migrationTaskType": "OrganizationTransformer",
+            "organizationsMappingFileName": "organization_mapping.json",
+            "files": [
+                {
+                    "file_name": "orgs_example.tsv"
+                }
+            ]
         }
     ]
 }
