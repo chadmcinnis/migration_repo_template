@@ -290,9 +290,12 @@
             "name": "migrate_open_loans",
             "migrationTaskType": "LoansMigrator",
             "fallbackServicePointId": "",
-            "openLoansFile": {
-                "file_name": "loans.tsv"
-            },
+            "openLoansFiles": [
+                {
+                    "file_name": "loans.tsv",
+                    "service_point_id": ""
+                }
+            ],
             "startingRow": 1,
             "item_files": [
                 {
