@@ -357,12 +357,12 @@
             ]
         },
         {
-            "name": "organization_transformer",
+            "name": "transform_orgs",
             "migrationTaskType": "OrganizationTransformer",
             "organizationsMappingFileName": "organization_mapping.json",
             "files": [
                 {
-                    "file_name": "orgs_example.tsv"
+                    "file_name": "example_organizations.tsv"
                 }
             ]
         }
