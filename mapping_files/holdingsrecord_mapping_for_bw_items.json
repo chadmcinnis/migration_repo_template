@@ -20,7 +20,7 @@
       },
       {
          "folio_field": "callNumber",
-         "legacy_field": "Not mapped",
+         "legacy_field": "CALL #(BIBLIO)",
          "value": "",
          "description": ""
       },

@@ -26,7 +26,7 @@
                     "suppressed": false
                 },
                 {
-                    "file_name": "staff_suppressed_bibs.mrc",
+                    "file_name": "bws.mrc",
                     "suppressed": false,
                     "staffSuppress": true
                 }
@@ -290,9 +290,12 @@
             "name": "migrate_open_loans",
             "migrationTaskType": "LoansMigrator",
             "fallbackServicePointId": "",
-            "openLoansFile": {
-                "file_name": "loans.tsv"
-            },
+            "openLoansFiles": [
+                {
+                    "file_name": "loans.tsv",
+                    "service_point_id": ""
+                }
+            ],
             "startingRow": 1,
             "item_files": [
                 {
@@ -365,6 +368,14 @@
                     "file_name": "example_organizations.tsv"
                 }
             ]
+        },
+        {
+            "name": "migrate_reserves",
+            "migrationTaskType": "ReservesMigrator",
+            "locationMapPath": "reserve_locations.tsv",
+            "courseReserveFilePath": {
+                "fileName": "folio_course_reserve_item_barcode.tsv"
+            }
         }
     ]
 }
