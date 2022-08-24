@@ -30,7 +30,8 @@
                     "suppressed": false,
                     "staffSuppress": true
                 }
-            ]
+            ],
+            "neverUpdateHridSettings": true
         },
         {
             "name": "post_bibs",
@@ -70,7 +71,8 @@
                     "file_name": "holding.mrc",
                     "suppressed": false
                 }
-            ]
+            ],
+            "neverUpdateHridSettings": true
         },
         {
             "name": "post_holdingsrecords_from_mfhd",
@@ -116,7 +118,8 @@
                 {
                     "file_name": "csv_items.tsv"
                 }
-            ]
+            ],
+            "neverUpdateHridSettings": true
         },
         {
             "name": "post_csv_holdings",
@@ -127,7 +130,8 @@
                 {
                     "file_name": "folio_holdings_test_run_transform_csv_holdings.json"
                 }
-            ]
+            ],
+            "neverUpdateHridSettings": true
         },
         {
             "name": "transform_csv_items",
@@ -145,7 +149,8 @@
                 {
                     "file_name": "csv_items.tsv"
                 }
-            ]
+            ],
+            "neverUpdateHridSettings": true
         },
         {
             "name": "post_csv_items",
@@ -174,7 +179,8 @@
                 {
                     "file_name": "items_linked_to_mfhds.csv"
                 }
-            ]
+            ],
+            "neverUpdateHridSettings": true
         },
         {
             "name": "post_mfhd_items",
@@ -216,7 +222,8 @@
                 {
                     "file_name": "bw_items.tsv"
                 }
-            ]
+            ],
+            "neverUpdateHridSettings": true
         },
         {
             "name": "post_bw_holdings",
@@ -245,7 +252,8 @@
                 {
                     "file_name": "bw_items.tsv"
                 }
-            ]
+            ],
+            "neverUpdateHridSettings": true
         },
         {
             "name": "post_bw_items",
