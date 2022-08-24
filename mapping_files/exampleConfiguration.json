@@ -320,8 +320,7 @@
                 {
                     "file_name": "folio_users_test_run_user_transform.json"
                 }
-            ],
-            "utcDifference": -6
+            ]
         },
         {
             "name": "migrate_open_requests",
@@ -344,8 +343,7 @@
                 {
                     "file_name": "folio_users_test_run_user_transform.json"
                 }
-            ],
-            "utcDifference": -6
+            ]
         },
         {
             "name": "migrate_courses",
