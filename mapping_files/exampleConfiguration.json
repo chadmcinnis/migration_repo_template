@@ -1,9 +1,9 @@
 {
     "libraryInformation": {
-        "tenantId": "fs09000000",
+        "tenantId": "diku",
         "multiFieldDelimiter": "<^>",
-        "okapiUrl": "https://okapi-bugfest-lotus.int.aws.folio.org",
-        "okapiUsername": "folio",
+        "okapiUrl": "https://folio-lotus-okapi.dev.folio.org",
+        "okapiUsername": "diku_admin",
         "libraryName": "FOLIO Reference env",
         "logLevelDebug": false,
         "folioRelease": "lotus",
@@ -14,7 +14,6 @@
         {
             "name": "transform_bibs",
             "migrationTaskType": "BibsTransformer",
-            "useTenantMappingRules": true,
             "ilsFlavour": "tag001",
             "tags_to_delete": [
                 "841",
@@ -24,11 +23,6 @@
                 {
                     "file_name": "bibs.mrc",
                     "suppressed": false
-                },
-                {
-                    "file_name": "bws.mrc",
-                    "suppressed": false,
-                    "staffSuppress": true
                 }
             ],
             "neverUpdateHridSettings": true
