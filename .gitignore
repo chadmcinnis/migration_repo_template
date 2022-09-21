@@ -6,6 +6,6 @@ source_data/
 !example_data/iterations/test_run/reports/
 !example_data/iterations/test_run/source_data/
 archive/
-iterations/test_run/
+/iterations/*/*
 *.data
 env/
