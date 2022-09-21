@@ -1,0 +1,40 @@
+2022-09-20 23:14:48,871	Logging set up	migrate_open_loans	migration_task_base.py:207
+2022-09-20 23:14:48,873	Mapping files folder is /home/theodor/code/migration_repo_template/mapping_files	migrate_open_loans	folder_structure.py:47
+2022-09-20 23:14:48,873	Git ignore is set up correctly	migrate_open_loans	folder_structure.py:48
+2022-09-20 23:14:48,874	Base folder is /home/theodor/code/migration_repo_template	migrate_open_loans	folder_structure.py:49
+2022-09-20 23:14:48,875	Reports and logs folder is /home/theodor/code/migration_repo_template/iterations/test_run/reports	migrate_open_loans	folder_structure.py:50
+2022-09-20 23:14:48,877	Results folder is /home/theodor/code/migration_repo_template/iterations/test_run/results	migrate_open_loans	folder_structure.py:51
+2022-09-20 23:14:48,878	Data folder is /home/theodor/code/migration_repo_template/iterations/test_run/source_data	migrate_open_loans	folder_structure.py:52
+2022-09-20 23:14:48,879	Source records files folder is /home/theodor/code/migration_repo_template/iterations/test_run/source_data/loans	migrate_open_loans	folder_structure.py:53
+2022-09-20 23:14:48,881	Log file will be located at /home/theodor/code/migration_repo_template/iterations/test_run/reports/log_loans_migrate_open_loans.log	migrate_open_loans	folder_structure.py:54
+2022-09-20 23:14:48,882	Extra data will be stored at/home/theodor/code/migration_repo_template/iterations/test_run/results/extradata_migrate_open_loans.extradata	migrate_open_loans	folder_structure.py:55
+2022-09-20 23:14:48,882	Data issue reports /home/theodor/code/migration_repo_template/iterations/test_run/reports/data_issues_log_migrate_open_loans.tsv	migrate_open_loans	folder_structure.py:56
+2022-09-20 23:14:48,883	Created objects will be stored at  /home/theodor/code/migration_repo_template/iterations/test_run/results/folio_loans_migrate_open_loans.json	migrate_open_loans	folder_structure.py:57
+2022-09-20 23:14:48,884	Migration report file will be saved at /home/theodor/code/migration_repo_template/iterations/test_run/reports/report_migrate_open_loans.md	migrate_open_loans	folder_structure.py:58
+2022-09-20 23:14:48,885	MigrationTaskBase init done	migrate_open_loans	migration_task_base.py:66
+2022-09-20 23:14:48,886	Check that SMTP is disabled before migrating loans	migrate_open_loans	loans_migrator.py:68
+2022-09-20 23:14:49,390	SMTP connection not disabled...	migrate_open_loans	loans_migrator.py:134
+2022-09-20 23:14:59,405	Proceeding with loans migration	migrate_open_loans	loans_migrator.py:70
+2022-09-20 23:14:59,406	Attempting to retrieve tenant timezone configuration...	migrate_open_loans	loans_migrator.py:71
+2022-09-20 23:14:59,836	Tenant locale settings not available. Using "UTC".	migrate_open_loans	loans_migrator.py:79
+2022-09-20 23:14:59,837	Validating legacy loans in file...	migrate_open_loans	loans_migrator.py:284
+2022-09-20 23:14:59,854	Done validating 17 legacy loans with 5 rotten apples	migrate_open_loans	loans_migrator.py:309
+2022-09-20 23:14:59,854	Loaded and validated 12 loans in file from loans.tsv	migrate_open_loans	loans_migrator.py:97
+2022-09-20 23:14:59,855	Loaded and validated 12 loans in total	migrate_open_loans	loans_migrator.py:102
+2022-09-20 23:14:59,856	Loaded 16 barcodes from items	migrate_open_loans	circulation_helper.py:273
+2022-09-20 23:14:59,856	Loaded 1 barcodes from users	migrate_open_loans	circulation_helper.py:263
+2022-09-20 23:14:59,858	Loaded and validated 9 loans against barcodes	migrate_open_loans	loans_migrator.py:105
+2022-09-20 23:14:59,858	Starting row number is 1	migrate_open_loans	loans_migrator.py:115
+2022-09-20 23:14:59,858	Init completed	migrate_open_loans	loans_migrator.py:116
+2022-09-20 23:14:59,859	Starting	migrate_open_loans	loans_migrator.py:142
+2022-09-20 23:15:00,423	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:1-6073090204	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:00,887	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:2-6073090204	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:01,348	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:6086090202	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:01,831	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:31293009401336	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:02,272	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:6073090103	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:02,759	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:6035050203	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:03,205	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:6035050205	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:03,650	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:6035010204	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:04,114	Check out must be performed at a service point Patron barcode: 123456789 Item Barcode:Actual thesis	migrate_open_loans	circulation_helper.py:164
+2022-09-20 23:15:04,116	Elapsed time: 0:00:15.778721	migrate_open_loans	migration_report.py:75
+2022-09-20 23:15:04,116	Work done, wrapping up	migrate_open_loans	__main__.py:98
