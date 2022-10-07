@@ -13,6 +13,7 @@
     "migrationTasks": [
         {
             "name": "transform_bibs",
+            "addAdministrativeNotesWithLegacyIds": true,
             "migrationTaskType": "BibsTransformer",
             "ilsFlavour": "tag001",
             "tags_to_delete": [
