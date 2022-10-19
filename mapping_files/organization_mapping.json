@@ -86,7 +86,7 @@
        },
        {
           "folio_field": "addresses[0].categories[0]",
-          "legacy_field": "Not mapped",
+          "legacy_field": "address_category",
           "value": "",
           "description": ""
        },
@@ -422,7 +422,7 @@
        },
        {
           "folio_field": "emails[0].categories[0]",
-          "legacy_field": "Not mapped",
+          "legacy_field": "EMAIL_category",
           "value": "",
           "description": ""
        },
@@ -671,6 +671,12 @@
           "legacy_field": "Not mapped",
           "value": "",
           "description": ""
-       }
+       },
+       {
+         "folio_field": "organizationTypes",
+         "legacy_field": "organization_types",
+         "value": "",
+         "description": ""
+     }
     ]
  }
