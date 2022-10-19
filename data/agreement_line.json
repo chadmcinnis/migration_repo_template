@@ -1,0 +1,8 @@
+{
+    "type": "external",
+    "authority": "EKB-PACKAGE",
+    "reference": "{{package_id}}",
+    "owner": {
+        "id": "{{fetch_uuid_package_title}}"
+    }
+}

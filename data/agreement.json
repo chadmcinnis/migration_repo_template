@@ -1,0 +1,31 @@
+{
+    "periods": [
+        {
+            "startDate": "{{start_date}}",
+            "endDate": "{{end_date}}"
+       }
+    ],
+    "name": "{{package_name}}",
+    "agreementStatus": "active",
+    "linkedLicenses": [
+        {
+            "remoteId": "{{fetch_uuid_Agreement_License_Name}}",
+            "status": "controlling"
+        }
+    ],
+    "orgs": [
+        {
+            "role": "subscription_agent",
+            "org": {
+                "orgsUuid": "74e67209-527a-4f06-966b-888f0f692a37"
+            }
+                    },
+        {
+            "role": "content_provider",
+            "org": {
+                "orgsUuid": "{{mapped_uuid_organizations}}",
+                "name": "{{Publisher_Name_y}}"
+            }
+        }
+    ]
+}

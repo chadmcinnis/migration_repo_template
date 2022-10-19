@@ -363,11 +363,11 @@
         {
             "name": "transform_orgs",
             "migrationTaskType": "OrganizationTransformer",
-            "organizationsMappingFileName": "organization_mapping.json",
+            "organizationMapPath": "organization_mapping.json",
+            "organizationTypesMapPath": "organization_types.tsv",
             "addressCategoriesMapPath": "address_categories.tsv",
             "emailCategoriesMapPath": "email_categories.tsv",
-            "phoneCategoriesMapPath": "",
-            "organizationTypesMapPath": "organization_types.tsv",
+            "phoneCategoriesMapPath": "phone_categories.tsv",
             "files": [
                 {
                     "file_name": "example_organizations.tsv"

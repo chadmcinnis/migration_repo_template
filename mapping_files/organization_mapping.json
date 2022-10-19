@@ -422,7 +422,7 @@
        },
        {
           "folio_field": "emails[0].categories[0]",
-          "legacy_field": "EMAIL_category",
+          "legacy_field": "email_category",
           "value": "",
           "description": ""
        },
@@ -548,7 +548,7 @@
        },
        {
           "folio_field": "phoneNumbers[0].categories[0]",
-          "legacy_field": "Not mapped",
+          "legacy_field": "phone_category",
           "value": "",
           "description": ""
        },
@@ -674,9 +674,9 @@
        },
        {
          "folio_field": "organizationTypes",
-         "legacy_field": "organization_types",
+         "legacy_field": "org_type",
          "value": "",
-         "description": ""
+         "description": "implemented in Morning Glory"
      }
     ]
  }
