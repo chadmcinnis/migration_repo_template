@@ -1,0 +1,323 @@
+2022-09-20 23:14:14,715	Logging set up	post_bw_holdings	migration_task_base.py:207
+2022-09-20 23:14:14,716	Mapping files folder is /home/theodor/code/migration_repo_template/mapping_files	post_bw_holdings	folder_structure.py:47
+2022-09-20 23:14:14,716	Git ignore is set up correctly	post_bw_holdings	folder_structure.py:48
+2022-09-20 23:14:14,716	Base folder is /home/theodor/code/migration_repo_template	post_bw_holdings	folder_structure.py:49
+2022-09-20 23:14:14,717	Reports and logs folder is /home/theodor/code/migration_repo_template/iterations/test_run/reports	post_bw_holdings	folder_structure.py:50
+2022-09-20 23:14:14,717	Results folder is /home/theodor/code/migration_repo_template/iterations/test_run/results	post_bw_holdings	folder_structure.py:51
+2022-09-20 23:14:14,717	Data folder is /home/theodor/code/migration_repo_template/iterations/test_run/source_data	post_bw_holdings	folder_structure.py:52
+2022-09-20 23:14:14,718	Source records files folder is /home/theodor/code/migration_repo_template/iterations/test_run/source_data	post_bw_holdings	folder_structure.py:53
+2022-09-20 23:14:14,719	Log file will be located at /home/theodor/code/migration_repo_template/iterations/test_run/reports/log_other_post_bw_holdings.log	post_bw_holdings	folder_structure.py:54
+2022-09-20 23:14:14,720	Extra data will be stored at/home/theodor/code/migration_repo_template/iterations/test_run/results/extradata_post_bw_holdings.extradata	post_bw_holdings	folder_structure.py:55
+2022-09-20 23:14:14,720	Data issue reports /home/theodor/code/migration_repo_template/iterations/test_run/reports/data_issues_log_post_bw_holdings.tsv	post_bw_holdings	folder_structure.py:56
+2022-09-20 23:14:14,721	Created objects will be stored at  /home/theodor/code/migration_repo_template/iterations/test_run/results/folio_other_post_bw_holdings.json	post_bw_holdings	folder_structure.py:57
+2022-09-20 23:14:14,721	Migration report file will be saved at /home/theodor/code/migration_repo_template/iterations/test_run/reports/report_post_bw_holdings.md	post_bw_holdings	folder_structure.py:58
+2022-09-20 23:14:14,722	MigrationTaskBase init done	post_bw_holdings	migration_task_base.py:66
+2022-09-20 23:14:14,722	Batch size is 1	post_bw_holdings	batch_poster.py:59
+2022-09-20 23:14:14,724	Running /home/theodor/code/migration_repo_template/iterations/test_run/results/failed_records_post_bw_holdings_20220920-231413.txt	post_bw_holdings	batch_poster.py:78
+2022-09-20 23:14:14,726	{
+ "id": "a06843e0-20ae-5621-818b-837f05f28114",
+ "metadata": {
+  "createdDate": "2022-09-20T21:13:56.171",
+  "createdByUserId": "02edd871-f83f-5bfb-84c6-ec08c0ab03b6",
+  "updatedDate": "2022-09-20T21:13:56.171",
+  "updatedByUserId": "02edd871-f83f-5bfb-84c6-ec08c0ab03b6"
+ },
+ "formerIds": [
+  "i10001037",
+  "18006871",
+  "oai:DiVA.org:kth-168252",
+  "i10001038"
+ ],
+ "instanceId": "eadad66a-1703-5540-8db7-c9cd1606d045",
+ "permanentLocationId": "b241764c-1466-4e1d-a028-1a3684a5da87",
+ "callNumber": "HD8008.A1 P8 no.59",
+ "notes": [
+  {
+   "holdingsNoteTypeId": "97fbb130-beb4-4eec-84a6-c69768ca3eea",
+   "note": "no.59",
+   "staffOnly": "true"
+  }
+ ],
+ "holdingsTypeId": "2286a2b5-168e-455e-b96b-4af124b0015c",
+ "sourceId": "f32d531e-df79-46b3-8932-cdd35f7a2264"
+}	post_bw_holdings	batch_poster.py:91
+2022-09-20 23:14:15,182	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.18KB2022-09-20T21:14:15.181572 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:15,182	Resetting batch...Number of failed batches: 1	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:15,617	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.18KB2022-09-20T21:14:15.616190 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:15,617	Resetting batch...Number of failed batches: 2	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:16,058	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.17KB2022-09-20T21:14:16.058198 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:16,059	Resetting batch...Number of failed batches: 3	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:16,499	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.16KB2022-09-20T21:14:16.498627 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:16,499	Resetting batch...Number of failed batches: 4	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:16,938	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.17KB2022-09-20T21:14:16.938410 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:16,939	Resetting batch...Number of failed batches: 5	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:17,372	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.16KB2022-09-20T21:14:17.372116 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:17,372	Resetting batch...Number of failed batches: 6	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:17,840	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.17KB2022-09-20T21:14:17.840343 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:17,841	Resetting batch...Number of failed batches: 7	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:18,307	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.16KB2022-09-20T21:14:18.306644 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:18,307	Resetting batch...Number of failed batches: 8	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:18,744	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.17KB2022-09-20T21:14:18.744372 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:18,745	Resetting batch...Number of failed batches: 9	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:19,179	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.16KB2022-09-20T21:14:19.178815 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:19,179	Resetting batch...Number of failed batches: 10	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:19,649	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.17KB2022-09-20T21:14:19.649407 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:19,650	Resetting batch...Number of failed batches: 11	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:20,084	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.16KB2022-09-20T21:14:20.083786 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:20,085	Resetting batch...Number of failed batches: 12	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:20,517	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.17KB2022-09-20T21:14:20.517031 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:20,517	Resetting batch...Number of failed batches: 13	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:20,997	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.16KB2022-09-20T21:14:20.997057 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:20,998	Resetting batch...Number of failed batches: 14	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:21,434	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.17KB2022-09-20T21:14:21.433693 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:21,434	Resetting batch...Number of failed batches: 15	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:21,904	Critical data issue. Record needs fixing		HTTP 422	Request size: 1.16KB2022-09-20T21:14:21.904265 UTC
+	{
+    "errors": [
+        {
+            "message": "Cannot set holdings_record.holdingstypeid = 2286a2b5-168e-455e-b96b-4af124b0015c because it does not exist in holdings_type.id.",
+            "type": "1",
+            "code": "-1",
+            "parameters": [
+                {
+                    "key": "holdings_record.holdingstypeid",
+                    "value": "2286a2b5-168e-455e-b96b-4af124b0015c"
+                }
+            ]
+        }
+    ]
+}	post_bw_holdings	batch_poster.py:163
+2022-09-20 23:14:21,905	Resetting batch...Number of failed batches: 16	post_bw_holdings	batch_poster.py:169
+2022-09-20 23:14:22,349	Posting successful! Total rows: 17 Total failed: 16 in 0.439772s Batch Size: 1 Request size: 1.14KB 	post_bw_holdings	batch_poster.py:195
+2022-09-20 23:14:22,350	Done posting 17 records. 	post_bw_holdings	batch_poster.py:126
+2022-09-20 23:14:22,350	Done. Wrapping up	post_bw_holdings	batch_poster.py:307
+2022-09-20 23:14:22,350	Failed records: 16 failed records in 16 failed batches. Failed records saved to /home/theodor/code/migration_repo_template/iterations/test_run/results/failed_records_post_bw_holdings_20220920-231414.txt	post_bw_holdings	batch_poster.py:311
+2022-09-20 23:14:22,351	Elapsed time: 0:00:09.062555	post_bw_holdings	migration_report.py:75
+2022-09-20 23:14:22,351	Done rerunning the posting	post_bw_holdings	batch_poster.py:359
+2022-09-20 23:14:22,352	Elapsed time: 0:00:09.063611	post_bw_holdings	migration_report.py:75
+2022-09-20 23:14:22,353	Work done, wrapping up	post_bw_holdings	__main__.py:98

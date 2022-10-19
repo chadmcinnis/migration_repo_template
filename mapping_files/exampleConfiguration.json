@@ -13,6 +13,7 @@
     "migrationTasks": [
         {
             "name": "transform_bibs",
+            "addAdministrativeNotesWithLegacyIds": true,
             "migrationTaskType": "BibsTransformer",
             "ilsFlavour": "tag001",
             "tags_to_delete": [
@@ -34,7 +35,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_instances_test_run_transform_bibs.json"
+                    "file_name": "folio_instances_transform_bibs.json"
                 }
             ]
         },
@@ -45,7 +46,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_srs_instances_test_run_transform_bibs.json"
+                    "file_name": "folio_srs_instances_transform_bibs.json"
                 }
             ]
         },
@@ -75,7 +76,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_holdings_test_run_transform_mfhd.json"
+                    "file_name": "folio_holdings_transform_mfhd.json"
                 }
             ]
         },
@@ -86,7 +87,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_srs_holdings_test_run_transform_mfhd.json"
+                    "file_name": "folio_srs_holdings_transform_mfhd.json"
                 }
             ]
         },
@@ -99,7 +100,7 @@
             "callNumberTypeMapFileName": "call_number_type_mapping.tsv",
             "holdingsTypeUuidForBoundwiths": "2286a2b5-168e-455e-b96b-4af124b0015c",
             "previouslyGeneratedHoldingsFiles": [
-                "folio_holdings_test_run_transform_mfhd.json"
+                "folio_holdings_transform_mfhd.json"
             ],
             "holdingsMergeCriteria": [
                 "instanceId",
@@ -122,7 +123,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_holdings_test_run_transform_csv_holdings.json"
+                    "file_name": "folio_holdings_transform_csv_holdings.json"
                 }
             ],
             "neverUpdateHridSettings": true
@@ -153,7 +154,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_items_test_run_transform_csv_items.json"
+                    "file_name": "folio_items_transform_csv_items.json"
                 }
             ]
         },
@@ -183,7 +184,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_items_test_run_transform_mfhd_items.json"
+                    "file_name": "folio_items_transform_mfhd_items.json"
                 }
             ]
         },
@@ -210,7 +211,7 @@
                 "permanentLocationId",
                 "callNumber"
             ],
-            "fallbackHoldingsTypeId": "fc637da4-0a92-4e84-8d58-e9770076d3ac",
+            "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
             "hridHandling": "default",
             "files": [
                 {
@@ -226,7 +227,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_holdings_test_run_transform_bw_holdings.json"
+                    "file_name": "folio_holdings_transform_bw_holdings.json"
                 }
             ]
         },
@@ -256,7 +257,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_items_test_run_transform_bw_items.json"
+                    "file_name": "folio_items_transform_bw_items.json"
                 }
             ]
         },
@@ -267,13 +268,13 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "extradata_test_run_user_transform.extradata"
+                    "file_name": "extradata_user_transform.extradata"
                 },
                 {
-                    "file_name": "extradata_test_run_transform_bw_items.extradata"
+                    "file_name": "extradata_transform_bw_items.extradata"
                 },
                 {
-                    "file_name": "extradata_test_run_transform_bw_holdings.extradata"
+                    "file_name": "extradata_transform_bw_holdings.extradata"
                 }
             ]
         },
@@ -284,7 +285,7 @@
             "batchSize": 250,
             "files": [
                 {
-                    "file_name": "folio_users_test_run_user_transform.json"
+                    "file_name": "folio_users_user_transform.json"
                 }
             ]
         },
@@ -301,18 +302,18 @@
             "startingRow": 1,
             "item_files": [
                 {
-                    "file_name": "folio_items_test_run_transform_csv_items.json"
+                    "file_name": "folio_items_transform_csv_items.json"
                 },
                 {
-                    "file_name": "folio_items_test_run_transform_bw_items.json"
+                    "file_name": "folio_items_transform_bw_items.json"
                 },
                 {
-                    "file_name": "folio_items_test_run_transform_mfhd_items.json"
+                    "file_name": "folio_items_transform_mfhd_items.json"
                 }
             ],
             "patron_files": [
                 {
-                    "file_name": "folio_users_test_run_user_transform.json"
+                    "file_name": "folio_users_user_transform.json"
                 }
             ]
         },
@@ -324,18 +325,18 @@
             },
             "item_files": [
                 {
-                    "file_name": "folio_items_test_run_transform_csv_items.json"
+                    "file_name": "folio_items_transform_csv_items.json"
                 },
                 {
-                    "file_name": "folio_items_test_run_transform_bw_items.json"
+                    "file_name": "folio_items_transform_bw_items.json"
                 },
                 {
-                    "file_name": "folio_items_test_run_transform_mfhd_items.json"
+                    "file_name": "folio_items_transform_mfhd_items.json"
                 }
             ],
             "patron_files": [
                 {
-                    "file_name": "folio_users_test_run_user_transform.json"
+                    "file_name": "folio_users_user_transform.json"
                 }
             ]
         },
@@ -355,7 +356,7 @@
             "batchSize": 1,
             "files": [
                 {
-                    "file_name": "extradata_test_run_migrate_courses.extradata"
+                    "file_name": "extradata_migrate_courses.extradata"
                 }
             ]
         },

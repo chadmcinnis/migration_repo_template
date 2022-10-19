@@ -1,0 +1,207 @@
+2022-09-20 23:13:34,064	Logging set up	transform_csv_items	migration_task_base.py:207
+2022-09-20 23:13:34,065	Mapping files folder is /home/theodor/code/migration_repo_template/mapping_files	transform_csv_items	folder_structure.py:47
+2022-09-20 23:13:34,065	Git ignore is set up correctly	transform_csv_items	folder_structure.py:48
+2022-09-20 23:13:34,066	Base folder is /home/theodor/code/migration_repo_template	transform_csv_items	folder_structure.py:49
+2022-09-20 23:13:34,066	Reports and logs folder is /home/theodor/code/migration_repo_template/iterations/test_run/reports	transform_csv_items	folder_structure.py:50
+2022-09-20 23:13:34,066	Results folder is /home/theodor/code/migration_repo_template/iterations/test_run/results	transform_csv_items	folder_structure.py:51
+2022-09-20 23:13:34,067	Data folder is /home/theodor/code/migration_repo_template/iterations/test_run/source_data	transform_csv_items	folder_structure.py:52
+2022-09-20 23:13:34,067	Source records files folder is /home/theodor/code/migration_repo_template/iterations/test_run/source_data/items	transform_csv_items	folder_structure.py:53
+2022-09-20 23:13:34,067	Log file will be located at /home/theodor/code/migration_repo_template/iterations/test_run/reports/log_items_transform_csv_items.log	transform_csv_items	folder_structure.py:54
+2022-09-20 23:13:34,068	Extra data will be stored at/home/theodor/code/migration_repo_template/iterations/test_run/results/extradata_transform_csv_items.extradata	transform_csv_items	folder_structure.py:55
+2022-09-20 23:13:34,068	Data issue reports /home/theodor/code/migration_repo_template/iterations/test_run/reports/data_issues_log_transform_csv_items.tsv	transform_csv_items	folder_structure.py:56
+2022-09-20 23:13:34,069	Created objects will be stored at  /home/theodor/code/migration_repo_template/iterations/test_run/results/folio_items_transform_csv_items.json	transform_csv_items	folder_structure.py:57
+2022-09-20 23:13:34,069	Migration report file will be saved at /home/theodor/code/migration_repo_template/iterations/test_run/reports/report_transform_csv_items.md	transform_csv_items	folder_structure.py:58
+2022-09-20 23:13:34,070	MigrationTaskBase init done	transform_csv_items	migration_task_base.py:66
+2022-09-20 23:13:34,070	Files to process:	transform_csv_items	migration_task_base.py:102
+2022-09-20 23:13:34,071		/home/theodor/code/migration_repo_template/iterations/test_run/source_data/items/csv_items.tsv	transform_csv_items	migration_task_base.py:104
+2022-09-20 23:13:34,072	55 fields in mapping file map	transform_csv_items	migration_task_base.py:212
+2022-09-20 23:13:34,072	16 Mapped fields in mapping file map	transform_csv_items	migration_task_base.py:218
+2022-09-20 23:13:34,074	/home/theodor/code/migration_repo_template/mapping_files/temp_loan_types.tsv not found. No temporary loan type mapping will be performed	transform_csv_items	items_transformer.py:96
+2022-09-20 23:13:34,075	 not found. No temporary location mapping will be performed	transform_csv_items	items_transformer.py:113
+2022-09-20 23:13:34,077	Found 3 rows in materialTypeId map	transform_csv_items	migration_task_base.py:254
+2022-09-20 23:13:34,078	folio_name,Z30_MATERIAL will be used for determinig materialTypeId	transform_csv_items	migration_task_base.py:259
+2022-09-20 23:13:34,079	Found 2 rows in permanentLoanTypeId map	transform_csv_items	migration_task_base.py:254
+2022-09-20 23:13:34,080	folio_name,Z30_MATERIAL will be used for determinig permanentLoanTypeId	transform_csv_items	migration_task_base.py:259
+2022-09-20 23:13:34,081	Found 5 rows in permanentLocationId map	transform_csv_items	migration_task_base.py:254
+2022-09-20 23:13:34,081	SUB_LIBRARY,PERM_LOCATION,legacy_code,folio_code will be used for determinig permanentLocationId	transform_csv_items	migration_task_base.py:259
+2022-09-20 23:13:34,082	No mapping setup for itemLevelCallNumberTypeId	transform_csv_items	migration_task_base.py:275
+2022-09-20 23:13:34,082	itemLevelCallNumberTypeId will have default mapping if any 	transform_csv_items	migration_task_base.py:276
+2022-09-20 23:13:34,083	Add a file named /home/theodor/code/migration_repo_template/mapping_files/call_number_type_mapping.tsv and add the field to the item.mapping.json file.	transform_csv_items	migration_task_base.py:277
+2022-09-20 23:13:34,083	Loaded 9 migrated IDs	transform_csv_items	migration_task_base.py:125
+2022-09-20 23:13:34,084	No mapping setup for status.name	transform_csv_items	migration_task_base.py:275
+2022-09-20 23:13:34,085	status.name will have default mapping if any 	transform_csv_items	migration_task_base.py:276
+2022-09-20 23:13:34,085	Add a file named /home/theodor/code/migration_repo_template/mapping_files/item_statuses.tsv and add the field to the item.mapping.json file.	transform_csv_items	migration_task_base.py:277
+2022-09-20 23:13:34,086	Using GITHB_TOKEN environment variable for Gihub API Access	transform_csv_items	FolioClient.py:229
+2022-09-20 23:13:34,488	MapperBase initiating	transform_csv_items	mapper_base.py:27
+2022-09-20 23:13:34,989	Fetched HRID settings.	transform_csv_items	mapper_base.py:41
+2022-09-20 23:13:34,990	Instance HRID prefix is ins	transform_csv_items	mapper_base.py:42
+2022-09-20 23:13:34,990	Instance start number is 1	transform_csv_items	mapper_base.py:43
+2022-09-20 23:13:34,990	Holdings HRID prefix is ins	transform_csv_items	mapper_base.py:44
+2022-09-20 23:13:34,991	Holdings start number is 1	transform_csv_items	mapper_base.py:45
+2022-09-20 23:13:34,991	Legacy identifier will be mapped from Z30_REC_KEY	transform_csv_items	mapping_file_mapper_base.py:132
+2022-09-20 23:13:34,992	Mapped values:
+{
+    "notes[0].itemNoteTypeId": "5a15e0f8-2802-4cbf-a4de-8f0dedd3ed3a",
+    "notes[0].staffOnly": false
+}	transform_csv_items	mapping_file_mapper_base.py:66
+2022-09-20 23:13:34,992	Statistical codes map is not set up	transform_csv_items	mapping_file_mapper_base.py:83
+2022-09-20 23:13:34,993	Mapped legacy fields:
+[
+    "Z30_CALL_NO_2",
+    "Z30_MATERIAL",
+    "Z30_ENUMERATION_A",
+    "Z30_REC_KEY",
+    "Z30_NOTE_OPAC",
+    "Z30_COPY_ID",
+    "fake_instance_id",
+    "Z30_BARCODE",
+    "Z30_CHRONOLOGICAL_I",
+    "Z30_ENUMERATION_B"
+]	transform_csv_items	mapping_file_mapper_base.py:97
+2022-09-20 23:13:34,994	Mapped FOLIO fields:
+[
+    "barcode",
+    "legacyIdentifier",
+    "chronology",
+    "copyNumber",
+    "enumeration",
+    "enumeration",
+    "formerIds[0]",
+    "formerIds[1]",
+    "holdingsRecordId",
+    "hrid",
+    "itemLevelCallNumber",
+    "materialTypeId",
+    "notes[0].itemNoteTypeId",
+    "notes[0].note",
+    "notes[0].staffOnly",
+    "permanentLoanTypeId"
+]	transform_csv_items	mapping_file_mapper_base.py:101
+2022-09-20 23:13:34,994	Using GITHB_TOKEN environment variable for Gihub API Access	transform_csv_items	FolioClient.py:229
+2022-09-20 23:13:36,431	loantypes reference data mapping. Initializing	transform_csv_items	ref_data_mapping.py:23
+2022-09-20 23:13:36,431	Fetching loantypes reference data from FOLIO	transform_csv_items	ref_data_mapping.py:24
+2022-09-20 23:13:37,344	Values from loantypes ref data in FOLIO that are not in the map: ['Selected', 'Course reserves']	transform_csv_items	ref_data_mapping.py:158
+2022-09-20 23:13:37,345	Set Can circulate as default loantypes mapping	transform_csv_items	ref_data_mapping.py:56
+2022-09-20 23:13:37,345	Loaded 1 mappings for 4 loantypes in FOLIO	transform_csv_items	ref_data_mapping.py:89
+2022-09-20 23:13:37,345	loaded 0 hybrid mappings for 4 loantypes in FOLIO	transform_csv_items	ref_data_mapping.py:93
+2022-09-20 23:13:37,346	loantypes reference data mapping. Done init	transform_csv_items	ref_data_mapping.py:35
+2022-09-20 23:13:37,346	mtypes reference data mapping. Initializing	transform_csv_items	ref_data_mapping.py:23
+2022-09-20 23:13:37,346	Fetching mtypes reference data from FOLIO	transform_csv_items	ref_data_mapping.py:24
+2022-09-20 23:13:38,261	Values from mtypes ref data in FOLIO that are not in the map: ['text', 'electronic resource', 'dvd', 'unspecified', 'microform']	transform_csv_items	ref_data_mapping.py:158
+2022-09-20 23:13:38,261	Set book as default mtypes mapping	transform_csv_items	ref_data_mapping.py:56
+2022-09-20 23:13:38,262	Loaded 2 mappings for 8 mtypes in FOLIO	transform_csv_items	ref_data_mapping.py:89
+2022-09-20 23:13:38,262	loaded 0 hybrid mappings for 8 mtypes in FOLIO	transform_csv_items	ref_data_mapping.py:93
+2022-09-20 23:13:38,262	mtypes reference data mapping. Done init	transform_csv_items	ref_data_mapping.py:35
+2022-09-20 23:13:38,263	locations reference data mapping. Initializing	transform_csv_items	ref_data_mapping.py:23
+2022-09-20 23:13:38,263	Fetching locations reference data from FOLIO	transform_csv_items	ref_data_mapping.py:24
+2022-09-20 23:13:39,177	Values from locations ref data in FOLIO that are not in the map: ['KU/CC/DI/M', 'E', 'KU/CC/DI/O', 'KU/CC/DI/A']	transform_csv_items	ref_data_mapping.py:158
+2022-09-20 23:13:39,177	Set KU/CC/DI/2 as default locations mapping	transform_csv_items	ref_data_mapping.py:56
+2022-09-20 23:13:39,178	Loaded 2 mappings for 6 locations in FOLIO	transform_csv_items	ref_data_mapping.py:89
+2022-09-20 23:13:39,178	loaded 2 hybrid mappings for 6 locations in FOLIO	transform_csv_items	ref_data_mapping.py:93
+2022-09-20 23:13:39,178	locations reference data mapping. Done init	transform_csv_items	ref_data_mapping.py:35
+2022-09-20 23:13:39,179	Init done	transform_csv_items	items_transformer.py:164
+2022-09-20 23:13:39,179	Starting....	transform_csv_items	items_transformer.py:167
+2022-09-20 23:13:39,180	Processing /home/theodor/code/migration_repo_template/iterations/test_run/source_data/items/csv_items.tsv	transform_csv_items	items_transformer.py:187
+2022-09-20 23:13:39,182	First legacy record:	transform_csv_items	items_transformer.py:195
+2022-09-20 23:13:39,183	{
+    "Z30_REC_KEY": "000000950000010",
+    "Z30_BARCODE": "950-10                        ",
+    "SUB_LIBRARY": "REN",
+    "Z30_MATERIAL": "BOOK",
+    "Z30_ITEM_STATUS": "02",
+    "Z30_OPEN_DATE": "20060723",
+    "Z30_UPDATE_DATE": "20060723",
+    "Z30_CATALOGER": "CONV      ",
+    "Z30_DATE_LAST_RETURN": "0",
+    "Z30_HOUR_LAST_RETURN": "0",
+    "Z30_IP_LAST_RETURN": "",
+    "Z30_NO_LOANS": "0",
+    "Z30_ALPHA": "L",
+    "PERM_LOCATION": "ACDPM",
+    "Z30_CALL_NO_TYPE": "0",
+    "Z30_CALL_NO": "$$hPQ6353$$i.M35513 1991",
+    "Z30_CALL_NO_KEY": "",
+    "Z30_CALL_NO_2_TYPE": "",
+    "Z30_CALL_NO_2": "",
+    "Z30_CALL_NO_2_KEY": "",
+    "Z30_DESCRIPTION": "",
+    "Z30_NOTE_OPAC": "",
+    "Z30_NOTE_CIRCULATION": "",
+    "Z30_NOTE_INTERNAL": "",
+    "Z30_ORDER_NUMBER": "",
+    "Z30_INVENTORY_NUMBER": "",
+    "Z30_INVENTORY_NUMBER_DATE": "0",
+    "Z30_LAST_SHELF_REPORT_DATE": "0",
+    "Z30_PRICE": "",
+    "Z30_SHELF_REPORT_NUMBER": "",
+    "Z30_ON_SHELF_DATE": "0",
+    "Z30_ON_SHELF_SEQ": "0",
+    "Z30_REC_KEY_2": "0000000000000000000",
+    "Z30_REC_KEY_3": "                                   00000",
+    "Z30_PAGES": "REN-10009541",
+    "Z30_ISSUE_DATE": "0",
+    "Z30_EXPECTED_ARRIVAL_DATE": "00000000",
+    "Z30_ARRIVAL_DATE": "00000000",
+    "Z30_ITEM_STATISTIC": "",
+    "Z30_ITEM_PROCESS_STATUS": "",
+    "Z30_COPY_ID": "",
+    "Z30_HOL_DOC_NUMBER_X": "000000167",
+    "Z30_TEMP_LOCATION": "N",
+    "Z30_ENUMERATION_A": "A",
+    "Z30_ENUMERATION_B": "B",
+    "Z30_ENUMERATION_C": "",
+    "Z30_ENUMERATION_D": "",
+    "Z30_ENUMERATION_E": "",
+    "Z30_ENUMERATION_F": "",
+    "Z30_ENUMERATION_G": "",
+    "Z30_ENUMERATION_H": "",
+    "Z30_CHRONOLOGICAL_I": "",
+    "Z30_CHRONOLOGICAL_J": "",
+    "Z30_CHRONOLOGICAL_K": "",
+    "Z30_CHRONOLOGICAL_L": "",
+    "Z30_CHRONOLOGICAL_M": "",
+    "Z30_SUPP_INDEX_O": "",
+    "Z30_85X_TYPE": "",
+    "Z30_DEPOSITORY_ID": "",
+    "Z30_LINKING_NUMBER": "0",
+    "Z30_GAP_INDICATOR": "",
+    "Z30_MAINTENANCE_COUNT": "0",
+    "Z30_PROCESS_STATUS_DATE": "0",
+    "Z30_UPD_TIME_STAMP": "200001011200000",
+    "Z30_IP_LAST_RETURN_V6": "",
+    "SYSNO": "",
+    "fake_instance_id": "7611780",
+    "holdings_note": "Some note",
+    "holdings_stmt": "1987-1988"
+}	transform_csv_items	items_transformer.py:196
+2022-09-20 23:13:39,184	All maped legacy fields are in the legacy object	transform_csv_items	mapping_file_mapper_base.py:498
+2022-09-20 23:13:39,188	fetching current user..	transform_csv_items	FolioClient.py:37
+2022-09-20 23:13:39,695	First FOLIO record:	transform_csv_items	items_transformer.py:205
+2022-09-20 23:13:39,695	{
+    "id": "95938509-c979-5cc5-a441-c6146f73dcb2",
+    "metadata": {
+        "createdDate": "2022-09-20T21:13:39.692",
+        "createdByUserId": "02edd871-f83f-5bfb-84c6-ec08c0ab03b6",
+        "updatedDate": "2022-09-20T21:13:39.692",
+        "updatedByUserId": "02edd871-f83f-5bfb-84c6-ec08c0ab03b6"
+    },
+    "hrid": "000000950000010",
+    "holdingsRecordId": "1bb6a881-6353-57a0-b0c5-f03b51ec09b1",
+    "formerIds": [
+        "7611780"
+    ],
+    "barcode": "950-10                        ",
+    "enumeration": "A B",
+    "status": {
+        "name": "Available",
+        "date": "2022-09-20T21:13:39.694218"
+    },
+    "materialTypeId": "dd0bf600-dbd9-44ab-9ff2-e2a61a6539f1",
+    "permanentLoanTypeId": "2e48e713-17f3-4c13-a9f8-23845bb210a4"
+}	transform_csv_items	items_transformer.py:206
+2022-09-20 23:13:39,703	Done processing file_name='csv_items.tsv' suppressed=False staff_suppressed=False service_point_id='' containing 3 records. Total records processed: 3	transform_csv_items	items_transformer.py:234
+2022-09-20 23:13:39,703	processed 3 records in 1 files	transform_csv_items	items_transformer.py:181
+2022-09-20 23:13:39,704	Work done. Wrapping up...	transform_csv_items	items_transformer.py:281
+2022-09-20 23:13:39,706	Elapsed time: 0:00:05.217297	transform_csv_items	migration_report.py:75
+2022-09-20 23:13:39,708	All done!	transform_csv_items	items_transformer.py:292
+2022-09-20 23:13:39,708	Work done, wrapping up	transform_csv_items	__main__.py:98

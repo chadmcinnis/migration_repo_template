@@ -1,6 +1,11 @@
 results/
 reports/
+source_data/
+!example_data/
+!example_data/iterations/test_run/results/
+!example_data/iterations/test_run/reports/
+!example_data/iterations/test_run/source_data/
 archive/
-data/
+/iterations/*/*
 *.data
 env/source_data/
