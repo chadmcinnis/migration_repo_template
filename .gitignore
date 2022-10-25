@@ -9,3 +9,5 @@ archive/
 /iterations/*/*
 *.data
 env/source_data/
+.venv/
+venv/
