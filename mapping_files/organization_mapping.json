@@ -193,6 +193,60 @@
           "description": ""
        },
        {
+         "folio_field": "contacts[0].firstName",
+         "legacy_field": "contact_1_fname",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "contacts[0].lastName",
+         "legacy_field": "contact_1_lname",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "contacts[0].emails[0]",
+         "legacy_field": "contact_1_email",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "contacts[0].addresses[0].addressLine1",
+         "legacy_field": "contact_1_address_line1",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "contacts[0].addresses[0].city",
+         "legacy_field": "contact_1_address_city",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "contacts[0].phoneNumbers[0].phoneNumber",
+         "legacy_field": "contact_1_phone",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "contacts[1].firstName",
+         "legacy_field": "contact_2_fname",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "contacts[1].lastName",
+         "legacy_field": "contact_2_lname",
+         "value": "",
+         "description": ""
+      },
+      {
+         "folio_field": "contacts[1].emails[0]",
+         "legacy_field": "contact_2_email",
+         "value": "",
+         "description": ""
+      },
+       {
           "folio_field": "description",
           "legacy_field": "org_note",
           "value": "",
