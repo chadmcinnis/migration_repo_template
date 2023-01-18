@@ -54,11 +54,9 @@
             "name": "transform_mfhd",
             "legacyIdMarcPath": "001",
             "migrationTaskType": "HoldingsMarcTransformer",
-            "mfhdMappingFileName": "mfhd_rules.json",
             "locationMapFileName": "locations.tsv",
             "defaultCallNumberTypeName": "Library of Congress classification",
             "fallbackHoldingsTypeId": "03c9c400-b9e3-4a07-ac0e-05ab470233ed",
-            "useTenantMappingRules": false,
             "hridHandling": "default",
             "createSourceRecords": true,
             "files": [
