@@ -1,6 +1,0 @@
-SUB_LIBRARY	PERM_LOCATION	legacy_code	folio_code
-msl	infoOff	infoOff	KU/CC/DI/P
-msl	jnlDesk	jnlDesk	KU/CC/DI/P
-*	maps	maps	KU/CC/DI/2
-*	maps	cd	KU/CC/DI/2
-*	*	*	KU/CC/DI/2
