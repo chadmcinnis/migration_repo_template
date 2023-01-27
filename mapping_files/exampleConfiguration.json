@@ -5,6 +5,7 @@
         "okapiUrl": "https://OKAPI_URL",
         "okapiUsername": "USERNAME",
         "logLevelDebug": false,
+        "libraryName": "Example Library",
         "folioRelease": "morning-glory",
         "addTimeStampToFileNames": false,
         "iterationIdentifier": "test_iteration"
