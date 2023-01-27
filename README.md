@@ -27,7 +27,7 @@ git clone git@github.com:FOLIO-FSE/migration_repo_template.git
 cd migration_repo_template
 sh create_folder_structure.sh
 ```
-Your repository should look like this: 
+Your repository should look like this:    
 ![image](https://user-images.githubusercontent.com/1894384/215044991-5b648501-aa10-46e2-873f-0b0996180a16.png)
 
 (If you are on Windows, create a similar folder structure in the way you are familiar with)
