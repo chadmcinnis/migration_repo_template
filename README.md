@@ -14,7 +14,7 @@ This is a quick guide on how to transform and load bib-level MARC records into a
 * A file of MARC21 Bib records in .mrc (binary) format
 ## 1. Create a git repository for your settings and data
 ###  Create a repo or clone this one
-Either use the Github button below to create your own repo based on this template
+Either use the Github button below to create your own repo based on this template   
 ![image](https://user-images.githubusercontent.com/1894384/215045112-6964ecfb-a446-4036-99d0-323104f262c5.png)
 Or clone the repo by running 
 ```
