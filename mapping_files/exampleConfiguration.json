@@ -6,7 +6,7 @@
         "okapiUsername": "USERNAME",
         "logLevelDebug": false,
         "libraryName": "Example Library",
-        "folioRelease": "morning-glory",
+        "folioRelease": "orchid",
         "addTimeStampToFileNames": false,
         "iterationIdentifier": "test_iteration"
     },
@@ -20,10 +20,10 @@
             "files": [
                 {
                     "file_name": "FILE_NAME_OF_MRC_FILE_NO_PATH",
-                    "suppressed": false
+                    "discovery_suppressed": false
                 }
             ],
-            "neverUpdateHridSettings": true
+            "updateHridSettings": false
         },
         {
             "name": "post_instances",
